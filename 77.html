@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Welcome Driver | Luxury Private Chauffeur Abdel Hajjou</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#04070d',
+                            900: '#070d19',
+                            800: '#0a1224',
+                            700: '#0f1b36',
+                            600: '#16274d'
+                        },
+                        gold: {
+                            light: '#f5e2a3',
+                            DEFAULT: '#d4af37',
+                            dark: '#aa8822'
+                        },
+                        cream: {
+                            DEFAULT: '#fdfbf7',
+                            muted: '#f4ede2'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070d19;
+            color: #fdfbf7;
+        }
+
+        .btn-gold-grad {
+            background: linear-gradient(135deg, #f5e2a3 0%, #d4af37 50%, #aa8822 100%);
+            color: #04070d;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold-grad:hover {
+            background: linear-gradient(135deg, #ffffff 0%, #f5e2a3 50%, #d4af37 100%);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .card-navy {
+            background: linear-gradient(180deg, #0f1b36 0%, #0a1224 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .lang-dropdown-box {
+            background-color: #070d19;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .pulse-wa {
+            animation: pulse-gold 2s infinite;
+        }
+
+        .gold-border-glow {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-cream min-h-screen flex flex-col antialiased selection:bg-gold selection:text-navy-950">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-navy-950 border-b border-gold/20 text-xs py-2 px-4 text-center text-gold/90 font-medium tracking-wide">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <span class="hidden sm:inline"><i class="fa-solid fa-award text-gold mr-1"></i> <span data-i18n="topBarExp">20+ Years Professional Experience in Paris Private Transfers</span></span>
+            <span class="mx-auto sm:mx-0"><i class="fa-solid fa-user-tie text-gold mr-1"></i> Driver: <strong class="text-white">Abdel Hajjou</strong></span>
+            <span class="hidden md:inline"><i class="fa-solid fa-users text-gold mr-1"></i> <span data-i18n="topBarGroups">Groups up to 30 passengers available</span></span>
+        </div>
+    </div>
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-700/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-3xl font-bold tracking-wider text-white hover:text-gold transition-colors">
+                    Paris<span class="text-gold">.</span>
+                </span>
+                <span class="text-[9px] uppercase tracking-widest text-gold/80 -mt-1">Welcome Driver</span>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold tracking-wider text-cream/90">
+                <a href="#home" class="hover:text-gold transition-colors uppercase" data-i18n="navHome">HOME</a>
+                <a href="#about" class="hover:text-gold transition-colors uppercase" data-i18n="navAbout">ABOUT ABDEL</a>
+                <a href="#services" class="hover:text-gold transition-colors uppercase" data-i18n="navServices">SERVICES</a>
+                <a href="#vehicles" class="hover:text-gold transition-colors uppercase" data-i18n="navVehicles">VEHICLES</a>
+                <a href="#prices" class="hover:text-gold transition-colors uppercase" data-i18n="navPrices">PRICES</a>
+                <a href="#reviews" class="hover:text-gold transition-colors uppercase" data-i18n="navReviews">REVIEWS</a>
+                <a href="#faq" class="hover:text-gold transition-colors uppercase" data-i18n="navFaq">FAQ</a>
+
+                <!-- LANGUAGE Dropdown Selector -->
+                <div class="relative group">
+                    <button id="lang-btn" class="flex items-center space-x-2 text-cream hover:text-gold py-1.5 px-3 rounded border border-gold/30 bg-navy-800 transition-all">
+                        <i class="fa-solid fa-globe text-gold text-sm"></i>
+                        <span id="current-lang-label" class="uppercase">English</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i>
+                    </button>
+
+                    <div id="lang-menu" class="absolute right-0 mt-1 w-44 lang-dropdown-box rounded-md py-2 hidden group-hover:block transition-all z-50">
+                        <a href="#" onclick="changeLang('en')" class="flex items-center space-x-3 px-4 py-2 text-xs text-cream hover:bg-navy-700 hover:text-gold">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </a>
+                        <a href="#" onclick="changeLang('fr')" class="flex items-center space-x-3 px-4 py-2 text-xs text-cream hover:bg-navy-700 hover:text-gold">
+                            <span>🇫🇷</span>
+                            <span>Français</span>
+                        </a>
+                        <a href="#" onclick="changeLang('ar')" class="flex items-center space-x-3 px-4 py-2 text-xs text-cream hover:bg-navy-700 hover:text-gold">
+                            <span>🇲🇦</span>
+                            <span>العربية</span>
+                        </a>
+                        <a href="#" onclick="changeLang('es')" class="flex items-center space-x-3 px-4 py-2 text-xs text-cream hover:bg-navy-700 hover:text-gold">
+                            <span>🇪🇸</span>
+                            <span>Español</span>
+                        </a>
+                        <a href="#" onclick="changeLang('it')" class="flex items-center space-x-3 px-4 py-2 text-xs text-cream hover:bg-navy-700 hover:text-gold">
+                            <span>🇮🇹</span>
+                            <span>Italiano</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#booking" class="btn-gold-grad font-bold text-xs uppercase px-5 py-2.5 rounded tracking-wider inline-block">
+                    <i class="fa-solid fa-car-side mr-1.5"></i> <span data-i18n="bookARideBtn">BOOK A RIDE</span>
+                </a>
+            </div>
+
+            <button id="mobile-toggle" class="lg:hidden text-gold text-2xl p-2 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-950 border-b border-navy-700 px-6 py-4 space-y-3 text-xs font-semibold">
+            <a href="#home" class="block text-cream hover:text-gold" data-i18n="navHome">HOME</a>
+            <a href="#about" class="block text-cream hover:text-gold" data-i18n="navAbout">ABOUT ABDEL</a>
+            <a href="#services" class="block text-cream hover:text-gold" data-i18n="navServices">SERVICES</a>
+            <a href="#vehicles" class="block text-cream hover:text-gold" data-i18n="navVehicles">VEHICLES</a>
+            <a href="#prices" class="block text-cream hover:text-gold" data-i18n="navPrices">PRICES</a>
+            <a href="#reviews" class="block text-cream hover:text-gold" data-i18n="navReviews">REVIEWS</a>
+            <a href="#faq" class="block text-cream hover:text-gold" data-i18n="navFaq">FAQ</a>
+            
+            <div class="pt-2 border-t border-navy-700 flex flex-wrap gap-2">
+                <button onclick="changeLang('en')" class="px-2.5 py-1 bg-navy-800 rounded border border-gold/30 text-xs">🇬🇧 EN</button>
+                <button onclick="changeLang('fr')" class="px-2.5 py-1 bg-navy-800 rounded border border-gold/30 text-xs">🇫🇷 FR</button>
+                <button onclick="changeLang('ar')" class="px-2.5 py-1 bg-navy-800 rounded border border-gold/30 text-xs">🇲🇦 AR</button>
+                <button onclick="changeLang('es')" class="px-2.5 py-1 bg-navy-800 rounded border border-gold/30 text-xs">🇪🇸 ES</button>
+                <button onclick="changeLang('it')" class="px-2.5 py-1 bg-navy-800 rounded border border-gold/30 text-xs">🇮🇹 IT</button>
+            </div>
+
+            <a href="#booking" class="block text-center btn-gold-grad py-3 rounded mt-3 font-bold text-navy-950">
+                <span data-i18n="bookARideBtn">BOOK A RIDE</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden py-16">
+        <div class="absolute inset-0 z-0">
+            <img src="1.jpeg" alt="Paris Eiffel Tower Background" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-navy-950/75 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-navy-950/80"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto space-y-6 pt-6">
+            <div class="inline-flex items-center space-x-2 bg-navy-800/90 border border-gold/40 rounded-full px-4 py-1.5 backdrop-blur-md">
+                <i class="fa-solid fa-shield-halved text-gold text-xs"></i>
+                <span class="text-xs sm:text-sm font-medium text-cream tracking-wide" data-i18n="heroBadge">Official Chauffeur: Abdel Hajjou — 20+ Years Experience</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white uppercase drop-shadow-2xl">
+                PARIS WELCOME DRIVER
+            </h1>
+
+            <p class="text-base sm:text-xl md:text-2xl text-cream-muted font-light tracking-wide max-w-3xl mx-auto drop-shadow-md" data-i18n="heroSubtitle">
+                Comfortable Private Transfers in Paris, Orly, CDG, Beauvais, Disneyland & Versailles
+            </p>
+
+            <div class="pt-2 flex flex-wrap justify-center gap-3 text-xs sm:text-sm text-gold/90 font-medium">
+                <span class="bg-navy-900/80 px-3 py-1.5 rounded-md border border-navy-700"><i class="fa-solid fa-check text-gold mr-1.5"></i> <span data-i18n="tagFixed">Fixed Guaranteed Prices</span></span>
+                <span class="bg-navy-900/80 px-3 py-1.5 rounded-md border border-navy-700"><i class="fa-solid fa-check text-gold mr-1.5"></i> <span data-i18n="tagConfirmation">Driver Confirmation Required</span></span>
+                <span class="bg-navy-900/80 px-3 py-1.5 rounded-md border border-navy-700"><i class="fa-solid fa-check text-gold mr-1.5"></i> <span data-i18n="tagGroups">Groups up to 30 passengers</span></span>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/33635166624?text=Hello%20Abdel,%20I%20would%20like%20to%20book%20a%20private%20transfer%20in%20Paris." target="_blank" class="w-full sm:w-auto btn-gold-grad inline-flex items-center justify-center space-x-2.5 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-md shadow-2xl">
+                    <i class="fa-brands fa-whatsapp text-xl text-green-950"></i>
+                    <span data-i18n="bookWhatsappHero">BOOK NOW VIA WHATSAPP</span>
+                </a>
+
+                <a href="#booking" class="w-full sm:w-auto bg-navy-800/80 hover:bg-navy-700 text-cream font-semibold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-md border border-gold/40 transition-all">
+                    <i class="fa-solid fa-calculator text-gold mr-2"></i> <span data-i18n="calcHeroBtn">CALCULATE & BOOK</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Driver Section -->
+    <section id="about" class="bg-navy-900 py-16 px-4 sm:px-6 lg:px-12 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 relative">
+                    <div class="card-navy rounded-2xl p-8 text-center relative overflow-hidden gold-border-glow">
+                        <div class="w-28 h-28 mx-auto rounded-full bg-gradient-to-tr from-gold to-gold-light p-1 shadow-xl mb-4">
+                            <div class="w-full h-full rounded-full bg-navy-900 flex items-center justify-center overflow-hidden">
+                                <i class="fa-solid fa-user-tie text-5xl text-gold"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white">Abdel Hajjou</h3>
+                        <p class="text-gold text-xs uppercase tracking-widest font-semibold mt-1" data-i18n="aboutRole">Master Chauffeur & Logistics Manager</p>
+                        
+                        <div class="mt-6 pt-6 border-t border-navy-700/80 grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-navy-800/80 p-3 rounded-lg border border-navy-700">
+                                <span class="block font-serif text-2xl font-bold text-gold">20+</span>
+                                <span class="text-[11px] text-cream-muted uppercase tracking-wider" data-i18n="aboutYears">Years Experience</span>
+                            </div>
+                            <div class="bg-navy-800/80 p-3 rounded-lg border border-navy-700">
+                                <span class="block font-serif text-2xl font-bold text-gold">30</span>
+                                <span class="text-[11px] text-cream-muted uppercase tracking-wider" data-i18n="aboutPassCap">Max Passengers</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 space-y-2 text-xs text-left text-cream-muted">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-phone text-gold"></i>
+                                <span>+33 6 35 16 66 24</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-envelope text-gold"></i>
+                                <span>abdelhajou55@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block px-3 py-1 bg-gold/10 border border-gold/30 rounded text-gold text-xs font-semibold uppercase tracking-widest" data-i18n="aboutLabel">
+                        PERSONAL VIP SERVICE
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight" data-i18n="aboutTitle">
+                        Your Trusted Professional Driver in Paris for Over Two Decades
+                    </h2>
+                    <p class="text-sm sm:text-base text-cream-muted leading-relaxed" data-i18n="aboutDesc1">
+                        Welcome to Paris! I am <strong>Abdel Hajjou</strong>, a professional private chauffeur with over 20 years of experience serving visitors, tourists, business executives, and VIP guests across Paris and Île-de-France.
+                    </p>
+                    <p class="text-sm sm:text-base text-cream-muted leading-relaxed" data-i18n="aboutDesc2">
+                        Whether you need a sleek <strong>Mercedes-Benz E-Class</strong> sedan or a spacious <strong>Mercedes Van</strong>, every transfer is executed with utmost punctuality, comfort, and discretion.
+                    </p>
+
+                    <div class="bg-navy-800 p-5 rounded-xl border-l-4 border-gold space-y-2">
+                        <h4 class="font-bold text-gold text-sm flex items-center" data-i18n="aboutGroupTitle">
+                            <i class="fa-solid fa-users-gear text-lg mr-2"></i> Group Logistics Up to 30 Passengers
+                        </h4>
+                        <p class="text-xs text-cream-muted leading-relaxed" data-i18n="aboutGroupDesc">
+                            Traveling with family, corporate delegations, or large groups? I coordinate multi-vehicle private fleets (Mercedes Sedans & Vans) with trusted co-drivers to seamlessly accommodate groups up to 30 passengers simultaneously.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-navy-800 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-700/50">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold" data-i18n="servSub">TAILORED PRIVATE TRANSFERS</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider" data-i18n="servTitle">
+                    SERVICES
+                </h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
+                        <i class="fa-solid fa-plane-arrival"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white" data-i18n="serv1Title">Airport Transfers</h3>
+                    <p class="text-xs text-cream-muted leading-relaxed" data-i18n="serv1Desc">
+                        Punctual & stress-free transfers for Orly, CDG, and Beauvais airports with flight monitoring.
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white" data-i18n="serv2Title">Paris & Disneyland</h3>
+                    <p class="text-xs text-cream-muted leading-relaxed" data-i18n="serv2Desc">
+                        Seamless rides connecting central Paris to Disneyland Paris hotels and parks for families and couples.
+                    </p>
+                </div>
+
+                <div class="card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white" data-i18n="serv3Title">Versailles & Day Trips</h3>
+                    <p class="text-xs text-cream-muted leading-relaxed" data-i18n="serv3Desc">
+                        Full day trips to Palace of Versailles, Giverny, Loire Valley, or custom sightseeing itineraries.
+                    </p>
+                </div>
+
+                <div class="card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white" data-i18n="serv4Title">Group & Business Travel</h3>
+                    <p class="text-xs text-cream-muted leading-relaxed" data-i18n="serv4Desc">
+                        Corporate transfers, fashion events, and group logistics up to 30 guests using multiple luxury vehicles.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet / Vehicles Section (Updated with the new van image) -->
+    <section id="vehicles" class="bg-navy-900 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold" data-i18n="vehSub">PREMIUM MERCEDES FLEET</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider" data-i18n="vehTitle">
+                    OUR VEHICLES
+                </h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Vehicle 1: Sedan Mercedes -->
+                <div class="card-navy rounded-2xl overflow-hidden group">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="1.jpeg" alt="Mercedes Benz Sedan" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-gold text-navy-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase">
+                            Up to 4 Passengers
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-white">Mercedes-Benz E-Class</h3>
+                                <p class="text-xs text-gold">2019 Executive Edition</p>
+                            </div>
+                            <span class="text-xs bg-navy-800 text-cream px-2.5 py-1 rounded border border-navy-700">Sedan</span>
+                        </div>
+                        <ul class="text-xs text-cream-muted space-y-2 border-t border-b border-navy-700/80 py-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-gold mr-2"></i> <span data-i18n="veh1Feat1">Capacity: Up to 4 Passengers + Luggage</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-gold mr-2"></i> <span data-i18n="veh1Feat2">Leather interior, Dual climate control, Quiet ride</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-gold mr-2"></i> <span data-i18n="veh1Feat3">Bottled water & phone chargers on board</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2: Mercedes Van (UPDATED WITH NEW IMAGE) -->
+                <div class="card-navy rounded-2xl overflow-hidden group border border-gold/30">
+                    <div class="h-60 overflow-hidden relative bg-navy-950">
+                        <!-- Replaced with the second picture filename -->
+                        <img src="ChatGPT Image Oct 18, 2026, 08_08_25 PM.png" alt="Mercedes V-Class Van" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-gold text-navy-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase z-10 shadow-lg">
+                            Up to 8 Passengers
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10 flex items-center space-x-2 bg-navy-900/90 border border-gold/40 px-3 py-1.5 rounded-md backdrop-blur-md">
+                            <i class="fa-solid fa-van-shuttle text-gold text-sm"></i>
+                            <span class="text-xs font-bold text-gold uppercase tracking-wider">Mercedes Executive Van</span>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-serif text-xl font-bold text-white">Mercedes-Benz Van</h3>
+                                <p class="text-xs text-gold">V-Class / Vito Premium</p>
+                            </div>
+                            <span class="text-xs bg-navy-800 text-gold border border-gold/30 px-2.5 py-1 rounded font-semibold">Van</span>
+                        </div>
+                        <ul class="text-xs text-cream-muted space-y-2 border-t border-b border-navy-700/80 py-3">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-gold mr-2"></i> <span data-i18n="veh2Feat1">Capacity: Up to 8 Passengers + Large Luggage</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-gold mr-2"></i> <span data-i18n="veh2Feat2">Ideal for families, groups, and extra luggage</span></li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-gold mr-2"></i> <span data-i18n="veh2Feat3">Multiple vehicles scalable up to 30 group size</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="prices" class="bg-navy-800 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-700/50">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold" data-i18n="priceSub">TRANSPARENT & GUARANTEED</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider" data-i18n="priceTitle">
+                    FIXED RATES
+                </h2>
+                <p class="text-xs text-cream-muted" data-i18n="priceDesc">
+                    No hidden fees, no surge pricing during traffic jams. The price you see is the final price.
+                </p>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            </div>
+
+            <!-- Pricing Table -->
+            <div class="overflow-x-auto rounded-xl border border-navy-700 bg-navy-900 shadow-2xl">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-navy-950 border-b border-navy-700 text-gold text-xs uppercase tracking-wider">
+                            <th class="py-4 px-6" data-i18n="thRoute">Route / Journey</th>
+                            <th class="py-4 px-6 text-center" data-i18n="thSedan">Sedan (Up to 4 Passengers)</th>
+                            <th class="py-4 px-6 text-center" data-i18n="thVan">Van (Up to 8 Passengers)</th>
+                            <th class="py-4 px-6 text-center" data-i18n="thAction">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-navy-800 text-xs text-cream">
+                        
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-plane-arrival text-gold mr-3"></i> Orly Airport → Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€35</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€65</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Orly Airport → Paris', 'Sedan (35€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-plane-arrival text-gold mr-3"></i> CDG Airport → Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€60</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€90</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('CDG Airport → Paris', 'Sedan (60€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-plane-arrival text-gold mr-3"></i> Beauvais Airport → Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€120</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€150</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Beauvais Airport → Paris', 'Sedan (120€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-wand-magic-sparkles text-gold mr-3"></i> CDG Airport → Disneyland Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€60</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€90</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('CDG Airport → Disneyland Paris', 'Sedan (60€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-wand-magic-sparkles text-gold mr-3"></i> Orly Airport → Disneyland Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€60</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€90</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Orly Airport → Disneyland Paris', 'Sedan (60€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-wand-magic-sparkles text-gold mr-3"></i> Beauvais Airport → Disneyland Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€125</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€160</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Beauvais Airport → Disneyland Paris', 'Sedan (125€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-location-dot text-gold mr-3"></i> Disneyland Paris → Paris Center
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€60</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€90</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Disneyland Paris → Paris', 'Sedan (60€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-crown text-gold mr-3"></i> Orly Airport → Versailles
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€60</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€90</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Orly Airport → Versailles', 'Sedan (60€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-crown text-gold mr-3"></i> Paris Center → Versailles
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€60</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€90</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Paris Center → Versailles', 'Sedan (60€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-navy-900 border border-gold/30 p-4 rounded-xl text-center text-xs text-cream-muted">
+                <i class="fa-solid fa-info-circle text-gold mr-1"></i> <span data-i18n="customPriceNote">For custom routes, day trips, or groups over 8 up to 30 passengers, contact Abdel directly on WhatsApp for an instant custom quote.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking" class="bg-navy-900 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-800">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="card-navy rounded-2xl p-6 sm:p-10 border border-gold/30 shadow-2xl space-y-8">
+                
+                <div class="text-center space-y-2">
+                    <span class="text-gold text-xs uppercase tracking-widest font-semibold" data-i18n="bookSub">RESERVE YOUR PRIVATE TRANSFER</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white uppercase" data-i18n="bookTitle">
+                        BOOK A RIDE WITH ABDEL
+                    </h2>
+                    <p class="text-xs text-cream-muted max-w-lg mx-auto" data-i18n="bookNote">
+                        Fill out your ride details below. Booking requests are dispatched instantly to driver Abdel Hajjou. <strong>Note: Booking is confirmed once approved by the driver.</strong>
+                    </p>
+                </div>
+
+                <form id="transfer-form" onsubmit="submitWhatsAppBooking(event)" class="space-y-6">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblRoute">Select Route / Destination *</label>
+                            <select id="form-route" onchange="calculatePrice()" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
+                                <option value="" data-i18n="optSelectRoute">-- Select Your Transfer Route --</option>
+                                <option value="Orly → Paris">Orly Airport → Paris</option>
+                                <option value="CDG → Paris">CDG Airport → Paris</option>
+                                <option value="Beauvais → Paris">Beauvais Airport → Paris</option>
+                                <option value="CDG → Disneyland">CDG Airport → Disneyland Paris</option>
+                                <option value="Orly → Disneyland">Orly Airport → Disneyland Paris</option>
+                                <option value="Beauvais → Disneyland">Beauvais Airport → Disneyland Paris</option>
+                                <option value="Disneyland → Paris">Disneyland Paris → Paris Center</option>
+                                <option value="Orly → Versailles">Orly Airport → Versailles</option>
+                                <option value="Paris → Versailles">Paris Center → Versailles</option>
+                                <option value="Custom / Day Trip">Custom Route / Full Day Trip</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblVehicle">Select Vehicle *</label>
+                            <select id="form-vehicle" onchange="calculatePrice()" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
+                                <option value="Sedan" data-i18n="optSedan">Sedan (Mercedes E-Class - Up to 4 pax)</option>
+                                <option value="Van" data-i18n="optVan">Van (Mercedes V-Class - Up to 8 pax)</option>
+                                <option value="Group fleet" data-i18n="optGroup">Group Logistics Fleet (Up to 30 pax)</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblName">Passenger Full Name *</label>
+                            <input type="text" id="form-name" required placeholder="e.g. Jean Dupont" class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblFlight">Flight / Train Number (Optional)</label>
+                            <input type="text" id="form-flight" placeholder="e.g. AF1234 or Eurostar 9010" class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblDate">Transfer Date *</label>
+                            <input type="date" id="form-date" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblTime">Transfer Time *</label>
+                            <input type="time" id="form-time" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
+                        </div>
+
+                    </div>
+
+                    <div class="space-y-2 pt-2">
+                        <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblPayment">Preferred Payment Method *</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <label class="flex items-center space-x-2 bg-navy-950 p-3 rounded border border-navy-700 cursor-pointer hover:border-gold/50">
+                                <input type="radio" name="payment" value="Cash in Car" checked class="text-gold focus:ring-gold">
+                                <span class="text-xs text-cream" data-i18n="payCash">💵 Cash in Car</span>
+                            </label>
+                            <label class="flex items-center space-x-2 bg-navy-950 p-3 rounded border border-navy-700 cursor-pointer hover:border-gold/50">
+                                <input type="radio" name="payment" value="Credit Card (TPE)" class="text-gold focus:ring-gold">
+                                <span class="text-xs text-cream" data-i18n="payCard">💳 Card in Car (TPE)</span>
+                            </label>
+                            <label class="flex items-center space-x-2 bg-navy-950 p-3 rounded border border-navy-700 cursor-pointer hover:border-gold/50">
+                                <input type="radio" name="payment" value="Online Link (Stripe/PayPal)" class="text-gold focus:ring-gold">
+                                <span class="text-xs text-cream" data-i18n="payOnline">📲 Online Link / Stripe</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-950 p-4 rounded-xl border border-gold/40 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2">
+                        <div>
+                            <span class="text-xs text-cream-muted uppercase tracking-wider block" data-i18n="lblEstPrice">Guaranteed Price Estimate:</span>
+                            <span id="calculated-price" class="font-serif text-2xl sm:text-3xl font-bold text-gold">€--</span>
+                        </div>
+                        <span class="text-[11px] text-cream-muted" data-i18n="txtPriceGuarantee">
+                            <i class="fa-solid fa-lock text-gold mr-1"></i> Fixed rate. No extra charges for traffic or luggage.
+                        </span>
+                    </div>
+
+                    <button type="submit" class="w-full btn-gold-grad py-4 rounded-md font-extrabold text-sm uppercase tracking-wider text-navy-950 flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span data-i18n="btnSubmitBooking">SEND BOOKING REQUEST VIA WHATSAPP</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Payment Methods Information Section -->
+    <section class="bg-navy-800 py-12 px-4 sm:px-6 lg:px-12 border-t border-navy-700/50">
+        <div class="max-w-7xl mx-auto text-center space-y-6">
+            <h3 class="font-serif text-xl font-bold text-white uppercase tracking-wider" data-i18n="paySecTitle">ACCEPTABLE PAYMENT METHODS</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-navy-900 p-5 rounded-xl border border-navy-700 space-y-2">
+                    <i class="fa-solid fa-money-bill-wave text-3xl text-gold"></i>
+                    <h4 class="font-bold text-xs uppercase text-white" data-i18n="payMethod1Title">Cash in Vehicle</h4>
+                    <p class="text-[11px] text-cream-muted" data-i18n="payMethod1Desc">Pay directly to driver Abdel at the end of your trip in Euros (€).</p>
+                </div>
+                <div class="bg-navy-900 p-5 rounded-xl border border-navy-700 space-y-2">
+                    <i class="fa-solid fa-credit-card text-3xl text-gold"></i>
+                    <h4 class="font-bold text-xs uppercase text-white" data-i18n="payMethod2Title">Credit Card Terminal (TPE)</h4>
+                    <p class="text-[11px] text-cream-muted" data-i18n="payMethod2Desc">Visa, Mastercard, and American Express accepted onboard with mobile payment terminal.</p>
+                </div>
+                <div class="bg-navy-900 p-5 rounded-xl border border-navy-700 space-y-2">
+                    <i class="fa-solid fa-shield-halved text-3xl text-gold"></i>
+                    <h4 class="font-bold text-xs uppercase text-white" data-i18n="payMethod3Title">Online Payment Link</h4>
+                    <p class="text-[11px] text-cream-muted" data-i18n="payMethod3Desc">Secure pre-payment via Stripe or PayPal payment link available upon request.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Reviews Section -->
+    <section id="reviews" class="bg-navy-900 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-800">
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold" data-i18n="revSub">TESTIMONIALS</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider" data-i18n="revTitle">
+                    CLIENT REVIEWS
+                </h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="card-navy p-6 rounded-xl space-y-4">
+                    <div class="flex text-gold text-xs space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-cream-muted italic leading-relaxed" data-i18n="rev1Text">
+                        "Abdel was waiting for us at CDG Bag claim with a sign. Super clean Mercedes Van, smooth ride to Disneyland Paris with child seats ready. 10/10 service!"
+                    </p>
+                    <div class="pt-2 border-t border-navy-700 flex justify-between items-center text-[11px]">
+                        <span class="font-bold text-white">Sophie & Family</span>
+                        <span class="text-gold">CDG → Disneyland</span>
+                    </div>
+                </div>
+
+                <div class="card-navy p-6 rounded-xl space-y-4">
+                    <div class="flex text-gold text-xs space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-cream-muted italic leading-relaxed" data-i18n="rev2Text">
+                        "I hired Abdel for a group delegation of 22 people. He organized 3 vans flawlessly. His 20 years of experience really show. Highly recommended!"
+                    </p>
+                    <div class="pt-2 border-t border-navy-700 flex justify-between items-center text-[11px]">
+                        <span class="font-bold text-white">David Miller</span>
+                        <span class="text-gold">Group Event (22 Pax)</span>
+                    </div>
+                </div>
+
+                <div class="card-navy p-6 rounded-xl space-y-4">
+                    <div class="flex text-gold text-xs space-x-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-cream-muted italic leading-relaxed" data-i18n="rev3Text">
+                        "Punctual, elegant driver, fixed price guaranteed despite heavy Paris traffic. Best chauffeur experience in Paris!"
+                    </p>
+                    <div class="pt-2 border-t border-navy-700 flex justify-between items-center text-[11px]">
+                        <span class="font-bold text-white">Elena Rossi</span>
+                        <span class="text-gold">Orly → Paris</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-navy-800 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-700/50">
+        <div class="max-w-4xl mx-auto space-y-12">
+            
+            <div class="text-center space-y-3">
+                <span class="text-gold text-xs uppercase tracking-widest font-semibold" data-i18n="faqSub">FREQUENTLY ASKED QUESTIONS</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider" data-i18n="faqTitle">
+                    NEED HELP?
+                </h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="space-y-4">
+                
+                <details class="bg-navy-900 border border-navy-700 rounded-lg p-4 group">
+                    <summary class="font-bold text-xs sm:text-sm text-white cursor-pointer flex justify-between items-center">
+                        <span data-i18n="faqQ1">Does the price change if there is a traffic jam in Paris?</span>
+                        <i class="fa-solid fa-chevron-down text-gold text-xs group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs text-cream-muted mt-3 pt-3 border-t border-navy-800 leading-relaxed" data-i18n="faqA1">
+                        No! All prices provided are strictly fixed and guaranteed in advance regardless of traffic duration or route detours.
+                    </p>
+                </details>
+
+                <details class="bg-navy-900 border border-navy-700 rounded-lg p-4 group">
+                    <summary class="font-bold text-xs sm:text-sm text-white cursor-pointer flex justify-between items-center">
+                        <span data-i18n="faqQ2">Are child seats (siège bébé) and booster seats available?</span>
+                        <i class="fa-solid fa-chevron-down text-gold text-xs group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs text-cream-muted mt-3 pt-3 border-t border-navy-800 leading-relaxed" data-i18n="faqA2">
+                        Yes, baby seats and child booster seats are provided completely free of charge upon request during booking.
+                    </p>
+                </details>
+
+                <details class="bg-navy-900 border border-navy-700 rounded-lg p-4 group">
+                    <summary class="font-bold text-xs sm:text-sm text-white cursor-pointer flex justify-between items-center">
+                        <span data-i18n="faqQ3">How do I meet driver Abdel at Orly or CDG Airport?</span>
+                        <i class="fa-solid fa-chevron-down text-gold text-xs group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs text-cream-muted mt-3 pt-3 border-t border-navy-800 leading-relaxed" data-i18n="faqA3">
+                        Driver Abdel will greet you inside the terminal right at the exit after luggage claim holding a personalized sign with your name.
+                    </p>
+                </details>
+
+                <details class="bg-navy-900 border border-navy-700 rounded-lg p-4 group">
+                    <summary class="font-bold text-xs sm:text-sm text-white cursor-pointer flex justify-between items-center">
+                        <span data-i18n="faqQ4">How is my booking confirmed?</span>
+                        <i class="fa-solid fa-chevron-down text-gold text-xs group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="text-xs text-cream-muted mt-3 pt-3 border-t border-navy-800 leading-relaxed" data-i18n="faqA4">
+                        Your booking request is submitted via WhatsApp. Driver Abdel will review your date/time availability and reply with immediate driver confirmation.
+                    </p>
+                </details>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer & Contact Details -->
+    <footer class="bg-navy-950 border-t border-gold/20 py-12 px-4 sm:px-6 lg:px-12 text-cream text-xs">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="space-y-3">
+                <span class="font-serif text-2xl font-bold text-white">Paris<span class="text-gold">.</span></span>
+                <p class="text-cream-muted text-xs leading-relaxed" data-i18n="ftrDesc">
+                    Luxury private chauffeur transfers across Paris, Orly, CDG, Disneyland & Versailles. Managed by Abdel Hajjou (20+ years experience).
+                </p>
+            </div>
+
+            <div class="space-y-2">
+                <h4 class="font-bold text-gold uppercase tracking-wider text-xs" data-i18n="ftrNav">Navigation</h4>
+                <ul class="space-y-1.5 text-cream-muted">
+                    <li><a href="#home" class="hover:text-gold" data-i18n="navHome">Home</a></li>
+                    <li><a href="#services" class="hover:text-gold" data-i18n="navServices">Services</a></li>
+                    <li><a href="#vehicles" class="hover:text-gold" data-i18n="navVehicles">Vehicles</a></li>
+                    <li><a href="#prices" class="hover:text-gold" data-i18n="navPrices">Prices</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-2">
+                <h4 class="font-bold text-gold uppercase tracking-wider text-xs" data-i18n="ftrContact">Contact Driver</h4>
+                <div class="space-y-2 text-cream-muted">
+                    <p><i class="fa-solid fa-user-tie text-gold mr-2"></i> Abdel Hajjou</p>
+                    <p><i class="fa-solid fa-phone text-gold mr-2"></i> +33 6 35 16 66 24</p>
+                    <p><i class="fa-solid fa-envelope text-gold mr-2"></i> abdelhajou55@gmail.com</p>
+                    <p><i class="fa-solid fa-location-dot text-gold mr-2"></i> Paris, France</p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-bold text-gold uppercase tracking-wider text-xs" data-i18n="ftrApp">Mobile Experience</h4>
+                <p class="text-[11px] text-cream-muted" data-i18n="ftrAppDesc">Book seamlessly on web, Android, and iOS via direct WhatsApp integration.</p>
+                <a href="https://wa.me/33635166624" target="_blank" class="inline-block btn-gold-grad px-4 py-2 rounded text-navy-950 font-bold text-xs">
+                    <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Abdel
+                </a>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-navy-800 text-center text-cream-muted text-[11px]">
+            &copy; 2026 Paris Welcome Driver — Chauffeur Abdel Hajjou. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/33635166624?text=Hello%20Abdel,%20I%20would%20like%20to%20book%20a%20private%20transfer." target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl pulse-wa transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Complete i18n Translations Dictionary & Logic -->
+    <script>
+        const translations = {
+            en: {
+                topBarExp: "20+ Years Professional Experience in Paris Private Transfers",
+                topBarGroups: "Groups up to 30 passengers available",
+                navHome: "HOME",
+                navAbout: "ABOUT ABDEL",
+                navServices: "SERVICES",
+                navVehicles: "VEHICLES",
+                navPrices: "PRICES",
+                navReviews: "REVIEWS",
+                navFaq: "FAQ",
+                bookARideBtn: "BOOK A RIDE",
+                heroBadge: "Official Chauffeur: Abdel Hajjou — 20+ Years Experience",
+                heroSubtitle: "Comfortable Private Transfers in Paris, Orly, CDG, Beauvais, Disneyland & Versailles",
+                tagFixed: "Fixed Guaranteed Prices",
+                tagConfirmation: "Driver Confirmation Required",
+                tagGroups: "Groups up to 30 passengers",
+                bookWhatsappHero: "BOOK NOW VIA WHATSAPP",
+                calcHeroBtn: "CALCULATE & BOOK",
+                aboutRole: "Master Chauffeur & Logistics Manager",
+                aboutYears: "Years Experience",
+                aboutPassCap: "Max Passengers",
+                aboutLabel: "PERSONAL VIP SERVICE",
+                aboutTitle: "Your Trusted Professional Driver in Paris for Over Two Decades",
+                aboutDesc1: "Welcome to Paris! I am Abdel Hajjou, a professional private chauffeur with over 20 years of experience serving visitors, tourists, business executives, and VIP guests across Paris and Île-de-France.",
+                aboutDesc2: "Whether you need a sleek Mercedes-Benz E-Class sedan or a spacious Mercedes Van, every transfer is executed with utmost punctuality, comfort, and discretion.",
+                aboutGroupTitle: "Group Logistics Up to 30 Passengers",
+                aboutGroupDesc: "Traveling with family, corporate delegations, or large groups? I coordinate multi-vehicle private fleets (Mercedes Sedans & Vans) with trusted co-drivers to seamlessly accommodate groups up to 30 passengers simultaneously.",
+                servSub: "TAILORED PRIVATE TRANSFERS",
+                servTitle: "SERVICES",
+                serv1Title: "Airport Transfers",
+                serv1Desc: "Punctual & stress-free transfers for Orly, CDG, and Beauvais airports with flight monitoring.",
+                serv2Title: "Paris & Disneyland",
+                serv2Desc: "Seamless rides connecting central Paris to Disneyland Paris hotels and parks for families and couples.",
+                serv3Title: "Versailles & Day Trips",
+                serv3Desc: "Full day trips to Palace of Versailles, Giverny, Loire Valley, or custom sightseeing itineraries.",
+                serv4Title: "Group & Business Travel",
+                serv4Desc: "Corporate transfers, fashion events, and group logistics up to 30 guests using multiple luxury vehicles.",
+                vehSub: "PREMIUM MERCEDES FLEET",
+                vehTitle: "OUR VEHICLES",
+                veh1Feat1: "Capacity: Up to 4 Passengers + Luggage",
+                veh1Feat2: "Leather interior, Dual climate control, Quiet ride",
+                veh1Feat3: "Bottled water & phone chargers on board",
+                veh2Feat1: "Capacity: Up to 8 Passengers + Large Luggage",
+                veh2Feat2: "Ideal for families, groups, and extra luggage",
+                veh2Feat3: "Multiple vehicles scalable up to 30 group size",
+                priceSub: "TRANSPARENT & GUARANTEED",
+                priceTitle: "FIXED RATES",
+                priceDesc: "No hidden fees, no surge pricing during traffic jams. The price you see is the final price.",
+                thRoute: "Route / Journey",
+                thSedan: "Sedan (Up to 4 Passengers)",
+                thVan: "Van (Up to 8 Passengers)",
+                thAction: "Action",
+                btnSelectRoute: "Book Route",
+                customPriceNote: "For custom routes, day trips, or groups over 8 up to 30 passengers, contact Abdel directly on WhatsApp for an instant custom quote.",
+                bookSub: "RESERVE YOUR PRIVATE TRANSFER",
+                bookTitle: "BOOK A RIDE WITH ABDEL",
+                bookNote: "Fill out your ride details below. Booking requests are dispatched instantly to driver Abdel Hajjou. Note: Booking is confirmed once approved by the driver.",
+                lblRoute: "Select Route / Destination *",
+                optSelectRoute: "-- Select Your Transfer Route --",
+                lblVehicle: "Select Vehicle *",
+                optSedan: "Sedan (Mercedes E-Class - Up to 4 pax)",
+                optVan: "Van (Mercedes V-Class - Up to 8 pax)",
+                optGroup: "Group Logistics Fleet (Up to 30 pax)",
+                lblName: "Passenger Full Name *",
+                lblFlight: "Flight / Train Number (Optional)",
+                lblDate: "Transfer Date *",
+                lblTime: "Transfer Time *",
+                lblPayment: "Preferred Payment Method *",
+                payCash: "💵 Cash in Car",
+                payCard: "💳 Card in Car (TPE)",
+                payOnline: "📲 Online Link / Stripe",
+                lblEstPrice: "Guaranteed Price Estimate:",
+                txtPriceGuarantee: "Fixed rate. No extra charges for traffic or luggage.",
+                btnSubmitBooking: "SEND BOOKING REQUEST VIA WHATSAPP",
+                paySecTitle: "ACCEPTABLE PAYMENT METHODS",
+                payMethod1Title: "Cash in Vehicle",
+                payMethod1Desc: "Pay directly to driver Abdel at the end of your trip in Euros (€).",
+                payMethod2Title: "Credit Card Terminal (TPE)",
+                payMethod2Desc: "Visa, Mastercard, and American Express accepted onboard with mobile payment terminal.",
+                payMethod3Title: "Online Payment Link",
+                payMethod3Desc: "Secure pre-payment via Stripe or PayPal payment link available upon request.",
+                revSub: "TESTIMONIALS",
+                revTitle: "CLIENT REVIEWS",
+                rev1Text: '"Abdel was waiting for us at CDG Bag claim with a sign. Super clean Mercedes Van, smooth ride to Disneyland Paris with child seats ready. 10/10 service!"',
+                rev2Text: '"I hired Abdel for a group delegation of 22 people. He organized 3 vans flawlessly. His 20 years of experience really show. Highly recommended!"',
+                rev3Text: '"Punctual, elegant driver, fixed price guaranteed despite heavy Paris traffic. Best chauffeur experience in Paris!"',
+                faqSub: "FREQUENTLY ASKED QUESTIONS",
+                faqTitle: "NEED HELP?",
+                faqQ1: "Does the price change if there is a traffic jam in Paris?",
+                faqA1: "No! All prices provided are strictly fixed and guaranteed in advance regardless of traffic duration or route detours.",
+                faqQ2: "Are child seats (siège bébé) and booster seats available?",
+                faqA2: "Yes, baby seats and child booster seats are provided completely free of charge upon request during booking.",
+                faqQ3: "How do I meet driver Abdel at Orly or CDG Airport?",
+                faqA3: "Driver Abdel will greet you inside the terminal right at the exit after luggage claim holding a personalized sign with your name.",
+                faqQ4: "How is my booking confirmed?",
+                faqA4: "Your booking request is submitted via WhatsApp. Driver Abdel will review your date/time availability and reply with immediate driver confirmation.",
+                ftrDesc: "Luxury private chauffeur transfers across Paris, Orly, CDG, Disneyland & Versailles. Managed by Abdel Hajjou (20+ years experience).",
+                ftrNav: "Navigation",
+                ftrContact: "Contact Driver",
+                ftrApp: "Mobile Experience",
+                ftrAppDesc: "Book seamlessly on web, Android, and iOS via direct WhatsApp integration."
+            },
+            fr: {
+                topBarExp: "Plus de 20 ans d'expérience dans le transport privé à Paris",
+                topBarGroups: "Transport de groupes jusqu'à 30 personnes",
+                navHome: "ACCUEIL",
+                navAbout: "À PROPOS D'ABDEL",
+                navServices: "SERVICES",
+                navVehicles: "VÉHICULES",
+                navPrices: "TARIFS",
+                navReviews: "AVIS",
+                navFaq: "FAQ",
+                bookARideBtn: "RÉSERVER UN TRAJET",
+                heroBadge: "Chauffeur Officiel: Abdel Hajjou — 20+ ans d'expérience",
+                heroSubtitle: "Transferts privés confortables à Paris, Orly, CDG, Beauvais, Disneyland & Versailles",
+                tagFixed: "Tarifs Fixes Garantis",
+                tagConfirmation: "Confirmation Chauffeur Requis",
+                tagGroups: "Groupes jusqu'à 30 passagers",
+                bookWhatsappHero: "RÉSERVER VIA WHATSAPP",
+                calcHeroBtn: "CALCULER ET RÉSERVER",
+                aboutRole: "Chauffeur de Maître & Logistique VIP",
+                aboutYears: "Années d'Expérience",
+                aboutPassCap: "Passagers Max",
+                aboutLabel: "SERVICE VIP PERSONNALISÉ",
+                aboutTitle: "Votre chauffeur privé de confiance à Paris depuis plus de 20 ans",
+                aboutDesc1: "Bienvenue à Paris ! Je suis Abdel Hajjou, chauffeur privé professionnel avec plus de 20 ans d'expérience au service des visiteurs, touristes et professionnels.",
+                aboutDesc2: "Que vous choisissiez une berline Mercedes Classe E ou un Van Mercedes spacieux, chaque trajet est assuré avec ponctualité et confort.",
+                aboutGroupTitle: "Logistique de Groupe Jusqu'à 30 Passagers",
+                aboutGroupDesc: "Vous voyagez en famille ou en groupe d'affaires ? Je coordonne une flotte privée multi-véhicules avec des chauffeurs partenaires pour transporter jusqu'à 30 personnes.",
+                servSub: "TRANSFERTS SUR MESURE",
+                servTitle: "NOS SERVICES",
+                serv1Title: "Transferts Aéroports",
+                serv1Desc: "Transferts ponctuels pour Orly, CDG et Beauvais avec suivi de vol.",
+                serv2Title: "Paris & Disneyland",
+                serv2Desc: "Liaisons directes entre Paris centre et les hôtels/parcs de Disneyland Paris.",
+                serv3Title: "Versailles & Excursions",
+                serv3Desc: "Excursions à la journée au Château de Versailles, Giverny ou le Val de Loire.",
+                serv4Title: "Groupes & Affaires",
+                serv4Desc: "Transport d'affaires, événements et groupes jusqu'à 30 personnes.",
+                vehSub: "FLOTTE MERCEDES PREMIUM",
+                vehTitle: "NOS VÉHICULES",
+                veh1Feat1: "Capacité: Jusqu'à 4 Passagers + Bagages",
+                veh1Feat2: "Intérieur cuir, Climatisation bizonale, Confort absolu",
+                veh1Feat3: "Bouteilles d'eau & chargeurs à bord",
+                veh2Feat1: "Capacité: Jusqu'à 8 Passagers + Grands Bagages",
+                veh2Feat2: "Idéal pour familles et grands groupes",
+                veh2Feat3: "Multi-véhicules disponibles pour 30 passagers",
+                priceSub: "TRANSPARENT ET GARANTI",
+                priceTitle: "TARIFS FIXES",
+                priceDesc: "Pas de frais cachés, prix garantis même en cas de bouchons.",
+                thRoute: "Trajet / Itinéraire",
+                thSedan: "Berline (Jusqu'à 4 Passagers)",
+                thVan: "Van (Jusqu'à 8 Passagers)",
+                thAction: "Action",
+                btnSelectRoute: "Réserver ce Trajet",
+                customPriceNote: "Pour les trajets sur mesure ou groupes jusqu'à 30 personnes, contactez Abdel sur WhatsApp.",
+                bookSub: "RÉSERVEZ VOTRE CHAUFFEUR",
+                bookTitle: "RÉSERVER UN TRAJET AVEC ABDEL",
+                bookNote: "Remplissez vos détails. La réservation est confirmée dès validation par le chauffeur Abdel.",
+                lblRoute: "Sélectionnez l'itinéraire *",
+                optSelectRoute: "-- Choisissez votre trajet --",
+                lblVehicle: "Véhicule *",
+                optSedan: "Berline (Mercedes Classe E - Max 4 pers)",
+                optVan: "Van (Mercedes Classe V - Max 8 pers)",
+                optGroup: "Flotte Groupe (Jusqu'à 30 pers)",
+                lblName: "Nom complet du passager *",
+                lblFlight: "Numéro de Vol / Train (Optionnel)",
+                lblDate: "Date du transfert *",
+                lblTime: "Heure de prise en charge *",
+                lblPayment: "Moyen de paiement préféré *",
+                payCash: "💵 Espèces à bord",
+                payCard: "💳 Carte en voiture (TPE)",
+                payOnline: "📲 Lien en ligne / Stripe",
+                lblEstPrice: "Tarif Garanti Estimation:",
+                txtPriceGuarantee: "Prix fixe sans supplément bagages ni embouteillages.",
+                btnSubmitBooking: "ENVOYER LA DEMANDE VIA WHATSAPP",
+                paySecTitle: "MOYENS DE PAIEMENT ACCEPTÉS",
+                payMethod1Title: "Espèces à bord",
+                payMethod1Desc: "Paiement direct auprès du chauffeur Abdel à la fin du trajet en Euros (€).",
+                payMethod2Title: "Carte bancaire (TPE)",
+                payMethod2Desc: "Visa, Mastercard et Amex acceptées à bord du véhicule.",
+                payMethod3Title: "Lien de paiement sécurisé",
+                payMethod3Desc: "Paiement à l'avance disponible par Stripe ou PayPal sur demande.",
+                revSub: "TÉMOIGNAGES",
+                revTitle: "AVIS CLIENTS",
+                rev1Text: '"Abdel nous attendait à la sortie bagages de CDG. Van très propre, sièges bébé installés. Service 10/10!"',
+                rev2Text: '"J\'ai réservé Abdel pour un groupe de 22 personnes. Organisation parfaite avec 3 vans!"',
+                rev3Text: '"Chauffeur élégant et ponctuel. Tarif fixe respecté malgré les bouchons."',
+                faqSub: "FOIRE AUX QUESTIONS",
+                faqTitle: "BESOIN D'AIDE ?",
+                faqQ1: "Le prix change-t-il en cas de bouchons ?",
+                faqA1: "Non ! Tous nos tarifs sont stricts, fixes et garantis à l'avance.",
+                faqQ2: "Des sièges bébé sont-ils disponibles ?",
+                faqA2: "Oui, les sièges bébé et réhausseurs sont mis à disposition gratuitement sur demande.",
+                faqQ3: "Comment retrouver Abdel à l'aéroport ?",
+                faqA3: "Abdel vous attend à la sortie des bagages avec une pancarte personnalisée à votre nom.",
+                faqQ4: "Comment est confirmée ma réservation ?",
+                faqA4: "Votre demande est envoyée via WhatsApp et Abdel vous confirme la disponibilité immédiatement.",
+                ftrDesc: "Transport privé VIP à Paris, Orly, CDG, Disneyland et Versailles. Géré par Abdel Hajjou (20+ ans d'expérience).",
+                ftrNav: "Navigation",
+                ftrContact: "Contact Chauffeur",
+                ftrApp: "Expérience Mobile",
+                ftrAppDesc: "Réservez facilement sur Web, Android et iOS via WhatsApp."
+            },
+            ar: {
+                topBarExp: "أكثر من 20 سنة خبرة في النقل الخاص الفاخر بباريس",
+                topBarGroups: "تنظيم نقل المجموعات حتى 30 شخصاً",
+                navHome: "الرئيسية",
+                navAbout: "عن السائق عبد الحق",
+                navServices: "الخدمات",
+                navVehicles: "السيارات",
+                navPrices: "الأسعار",
+                navReviews: "الآراء",
+                navFaq: "الأسئلة الشائعة",
+                bookARideBtn: "طلب حجز",
+                heroBadge: "السائق الخاص: Abdel Hajjou — خبرة أزيد من 20 سنة",
+                heroSubtitle: "توصيل خاص ومريح في باريس، مطار أورلي، CDG، بوفيه، ديزني لاند وفرساي",
+                tagFixed: "أسعار ثابته ومضمونة",
+                tagConfirmation: "الحجز يتأكد بعد موافقة السائق",
+                tagGroups: "نقل مجموعات حتى 30 شخصاً",
+                bookWhatsappHero: "احجز الآن عبر واتساب",
+                calcHeroBtn: "احسب الثمن واحجز",
+                aboutRole: "سائق خاص وسفير الفخامة بباريس",
+                aboutYears: "سنوات خبرة",
+                aboutPassCap: "أقصى عدد ركاب",
+                aboutLabel: "خدمة VIP شخصية",
+                aboutTitle: "سائقك الخاص والموثوق في باريس لأكثر من عقدين",
+                aboutDesc1: "مرحباً بكم في باريس! أنا عبد الحق (Abdel Hajjou)، سائق خاص محترف بخبرة تتجاوز 20 سنة في خدمة الزوار والشخصيات الهامة في باريس وضواحيها.",
+                aboutDesc2: "سواء اخترت سيارة Mercedes E-Class أو سيارة Van عائلية كبيرة، تضمن رحلة منتهية بالراحة والمواعيد الدقيقة.",
+                aboutGroupTitle: "تنظيم رحلات المجموعات حتى 30 شخصاً",
+                aboutGroupDesc: "هل تسافر مع عائلتك أو مجموعات عمل؟ أنسق أسطولاً من سيارات الفان والسيارات الفاخرة مع سائقين محترفين لنقل حتى 30 شخصاً في نفس الوقت.",
+                servSub: "رحلات خاصة وحسب الطلب",
+                servTitle: "الخدمات",
+                serv1Title: "توصيل المطارات",
+                serv1Desc: "توصيل من وإلى مطار أورلي، شارل ديغول، ومطار بوفيه (Beauvais) مع متابعة الطيران.",
+                serv2Title: "باريس وديزني لاند",
+                serv2Desc: "تنقل مريح وسريع بين وسط باريس وفنادق ومتنزهات ديزني لاند.",
+                serv3Title: "فرساي والجولات السياحية",
+                serv3Desc: "رحلات سياحية نهارية كاملة إلى قصر فرساي وجولات داخل وخارج باريس.",
+                serv4Title: "رجال الأعمال والمجموعات",
+                serv4Desc: "نقل المؤتمرات والمجموعات السياحية حتى 30 شخصاً بسيارات متعددة.",
+                vehSub: "أسطول مرسيدس فاخر",
+                vehTitle: "السيارات المتوفرة",
+                veh1Feat1: "السعة: حتى 4 ركاب مع الحقائب",
+                veh1Feat2: "فرش جلد، تكييف ممتاز، راحة تامة",
+                veh1Feat3: "ماء وشواحن هواتف داخل السيارة",
+                veh2Feat1: "السعة: حتى 8 ركاب وحقائب كبيرة",
+                veh2Feat2: "مثالية للعائلات والمجموعات الكبيرة",
+                veh2Feat3: "إمكانية توفير سيارات متعددة حتى 30 شخصاً",
+                priceSub: "شفافية وأسعار واضحة",
+                priceTitle: "الأسعار الثابتة",
+                priceDesc: "لا توجد مصاريف خفية. الثمن الذي تراه هو الثمن النهائي حتى مع الازدحام.",
+                thRoute: "المسار / الرحلة",
+                thSedan: "سيارة (حتى 4 ركاب)",
+                thVan: "فان Van (حتى 8 ركاب)",
+                thAction: "طلب الحجز",
+                btnSelectRoute: "احجز هذا المسار",
+                customPriceNote: "للمسارات الخاصة أو المجموعات الكبيرة حتى 30 شخصاً، تواصل مع عبد الحق مباشرة عبر واتساب للحصول على سعر أوتوماتيكي.",
+                bookSub: "احجز رحلتك الخاصة",
+                bookTitle: "طلب حجز مع السائق عبد الحق",
+                bookNote: "أدخل معلومات الرحلة أدناه. الطلب يرسل مباشرة إلى السائق عبد الحق، والحجز يتأكد بعد موافقته.",
+                lblRoute: "اختر المسار / الوجهة *",
+                optSelectRoute: "-- اختر مسار الرحلة --",
+                lblVehicle: "نوع السيارة *",
+                optSedan: "سيارة (Mercedes E-Class - حتى 4 ركاب)",
+                optVan: "فان (Mercedes Van - حتى 8 ركاب)",
+                optGroup: "أسطول مجموعات (حتى 30 شخصاً)",
+                lblName: "الاسم الكامل للزبون *",
+                lblFlight: "رقم الطائرة أو القطار (اختياري)",
+                lblDate: "تاريخ الرحلة *",
+                lblTime: "توقيت الحضور *",
+                lblPayment: "طريقة الدفع المفضل *",
+                payCash: "💵 نقداً داخل السيارة",
+                payCard: "💳 بطاقة بنكية (TPE)",
+                payOnline: "📲 رابط دفع إلكتروني / Stripe",
+                lblEstPrice: "الثمن المحدد للرحلة:",
+                txtPriceGuarantee: "ثمن ثابت ولا تتغير التكلفة بسبب زحمة السير.",
+                btnSubmitBooking: "إرسال طلب الحجز عبر واتساب",
+                paySecTitle: "طرق الدفع المقبولة",
+                payMethod1Title: "الدفع نقداً",
+                payMethod1Desc: "الدفع مباشرة للسائق عبد الحق في نهاية الرحلة بالأورو (€).",
+                payMethod2Title: "البطاقة البنكية (TPE)",
+                payMethod2Desc: "نقبل جميع البطاقات البنكية داخل السيارة عبر جهاز الدفع.",
+                payMethod3Title: "رابط دفع إلكتروني",
+                payMethod3Desc: "يمكن الدفع المسبق عبر رابط Stripe أو PayPal عند الطلب.",
+                revSub: "آراء الزبناء",
+                revTitle: "تقييمات الزبناء",
+                rev1Text: '"كان عبد الحق في انتظارنا بالمطار مع لوحة باسمنا. سيارة فان ممتازة ونظيفة وكراسي الأطفال كانت جاهزة. خدمة 10/10!"',
+                rev2Text: '"حجزنا مع عبد الحق لنقل وفد من 22 شخصاً. نظم 3 سيارات فان باحترافية عالية. خبرة 20 سنة واضحة جداً!"',
+                rev3Text: '"سائق أنيق ومواعيد مضبوطة بالدقيقة. الثمن ثابت رغم زحمة باريس."',
+                faqSub: "الأسئلة الشائعة",
+                faqTitle: "هل تحتاج مساعدة؟",
+                faqQ1: "هل يتغير الثمن إذا كان هناك ازدحام مروري في باريس؟",
+                faqA1: "لا! جميع الأسعار محددة ومضمونة مسبقاً ولا تتغير مهما كانت زحمة السير.",
+                faqQ2: "هل تتوفر كراسي الأطفال (Siège bébé)؟",
+                faqA2: "نعم، نوفر كراسي الأطفال مجاناً عند الطلب أثناء الحجز.",
+                faqQ3: "كيف ألتقي بالسائق عبد الحق في المطار؟",
+                faqA3: "ينتظرك عبد الحق داخل المطار مباشرة بعد الخروج من منطقة الأمتعة حاملاً لافتة باسمك.",
+                faqQ4: "كيف يتأكد حجز الرحلة؟",
+                faqA4: "يرسل طلبك عبر الواتساب ويقوم عبد الحق بمراجعة التوقيت والرد عليك بـ تأكيد الحجز فوراً.",
+                ftrDesc: "خدمة النقل الخاص الفاخر بباريس، أورلي، CDG، ديزني لاند وفرساي. بقيادة Abdel Hajjou (20 سنة خبرة).",
+                ftrNav: "التنقل",
+                ftrContact: "معلومات الاتصال",
+                ftrApp: "تطبيق الجوال",
+                ftrAppDesc: "احجز بسهولة عبر الموقع أو الهاتف من خلال واتساب."
+            },
+            es: {
+                topBarExp: "Más de 20 años de experiencia en transporte privado en París",
+                topBarGroups: "Transporte de grupos hasta 30 personas",
+                navHome: "INICIO",
+                navAbout: "SOBRE ABDEL",
+                navServices: "SERVICIOS",
+                navVehicles: "VEHÍCULOS",
+                navPrices: "PRECIOS",
+                navReviews: "OPINIONES",
+                navFaq: "FAQ",
+                bookARideBtn: "RESERVAR",
+                heroBadge: "Chófer Oficial: Abdel Hajjou — 20+ Años de Experiencia",
+                heroSubtitle: "Traslados privados cómodos en París, Orly, CDG, Beauvais, Disneyland y Versalles",
+                tagFixed: "Precios Fijos Garantizados",
+                tagConfirmation: "Requiere Confirmación del Conductor",
+                tagGroups: "Grupos hasta 30 pasajeros",
+                bookWhatsappHero: "RESERVAR POR WHATSAPP",
+                calcHeroBtn: "CALCULAR Y RESERVAR",
+                aboutRole: "Chófer VIP y Gestión Logística",
+                aboutYears: "Años de Experiencia",
+                aboutPassCap: "Pasajeros Máx",
+                aboutLabel: "SERVICIO VIP PERSONALIZADO",
+                aboutTitle: "Su chófer privado de confianza en París desde hace más de 20 años",
+                aboutDesc1: "¡Bienvenido a París! Soy Abdel Hajjou, chófer privado profesional con más de 20 años de experiencia al servicio de visitantes y ejecutivos.",
+                aboutDesc2: "Tanto en berlina Mercedes Clase E como en Van Mercedes, cada traslado se realiza con total puntualidad y confort.",
+                aboutGroupTitle: "Logística de Grupos de hasta 30 Pasajeros",
+                aboutGroupDesc: "¿Viaja en grupo? Coordino flotas de vehículos Mercedes con chóferes colaboradores para transportar hasta 30 personas.",
+                servSub: "TRASLADOS PRIVADOS A MEDIDA",
+                servTitle: "SERVICIOS",
+                serv1Title: "Traslados de Aeropuerto",
+                serv1Desc: "Traslados puntuales para Orly, CDG y Beauvais con seguimiento de su vuelo.",
+                serv2Title: "París y Disneyland",
+                serv2Desc: "Conexiones directas entre el centro de París y Disneyland París.",
+                serv3Title: "Versalles y Excursiones",
+                serv3Desc: "Excursiones de día completo al Palacio de Versalles o tours personalizados.",
+                serv4Title: "Grupos y Negocios",
+                serv4Desc: "Eventos corporativos y transporte de grupos de hasta 30 personas.",
+                vehSub: "FLOTA MERCEDES PREMIUM",
+                vehTitle: "NUESTROS VEHÍCULOS",
+                veh1Feat1: "Capacidad: Hasta 4 Pasajeros + Equipaje",
+                veh1Feat2: "Interior en cuero, Climatizador, Máximo confort",
+                veh1Feat3: "Agua embotellada y cargadores a bordo",
+                veh2Feat1: "Capacidad: Hasta 8 Pasajeros + Equipaje Grande",
+                veh2Feat2: "Ideal para familias y grupos grandes",
+                veh2Feat3: "Flota escalable para 30 personas",
+                priceSub: "TRANSPARENTE Y GARANTIZADO",
+                priceTitle: "TARIFAS FIJAS",
+                priceDesc: "Sin costes ocultos. El precio acordado es el final, incluso con tráfico.",
+                thRoute: "Ruta / Trayecto",
+                thSedan: "Berlina (Hasta 4 Pasajeros)",
+                thVan: "Van (Hasta 8 Pasajeros)",
+                thAction: "Acción",
+                btnSelectRoute: "Reservar Ruta",
+                customPriceNote: "Para rutas a medida o grupos de hasta 30 personas, contacte con Abdel por WhatsApp.",
+                bookSub: "RESERVE SU TRASLADO PRIVADO",
+                bookTitle: "RESERVAR CON ABDEL",
+                bookNote: "Rellene sus datos. La reserva se confirma tras la aprobación del chófer Abdel.",
+                lblRoute: "Seleccione Ruta *",
+                optSelectRoute: "-- Elija su trayecto --",
+                lblVehicle: "Vehículo *",
+                optSedan: "Berlina (Mercedes Clase E - Máx 4 pax)",
+                optVan: "Van (Mercedes Clase V - Máx 8 pax)",
+                optGroup: "Flota Grupo (Hasta 30 pax)",
+                lblName: "Nombre completo del pasajero *",
+                lblFlight: "Número de Vuelo / Tren (Opcional)",
+                lblDate: "Fecha de traslado *",
+                lblTime: "Hora de recogida *",
+                lblPayment: "Método de pago preferido *",
+                payCash: "💵 Efectivo en el vehículo",
+                payCard: "💳 Tarjeta en el vehículo (TPE)",
+                payOnline: "📲 Enlace Online / Stripe",
+                lblEstPrice: "Precio Estimado Garantizado:",
+                txtPriceGuarantee: "Tarifa fija. Sin cargos extra por tráfico o equipaje.",
+                btnSubmitBooking: "ENVIAR SOLICITUD POR WHATSAPP",
+                paySecTitle: "MÉTODOS DE PAGO ACEPTADOS",
+                payMethod1Title: "Efectivo en vehículo",
+                payMethod1Desc: "Pago directo al chófer Abdel al finalizar el trayecto en Euros (€).",
+                payMethod2Title: "Tarjeta de Crédito (TPE)",
+                payMethod2Desc: "Visa, Mastercard y Amex aceptadas en el vehículo.",
+                payMethod3Title: "Enlace de Pago Online",
+                payMethod3Desc: "Pago previo seguro por Stripe o PayPal bajo petición.",
+                revSub: "TESTIMONIOS",
+                revTitle: "OPINIONES DE CLIENTES",
+                rev1Text: '"Abdel nos esperaba en la salida de equipajes de CDG. Van impoluto y sillas infantiles listas. ¡Servicio 10/10!"',
+                rev2Text: '"Contraté a Abdel para una delegación de 22 personas. Organizó 3 vans a la perfección. ¡Muy recomendable!"',
+                rev3Text: '"Chófer elegante y puntual. Precio fijo garantizado a pesar del tráfico de París."',
+                faqSub: "PREGUNTAS FRECUENTES",
+                faqTitle: "¿NECESITA AYUDA?",
+                faqQ1: "¿El precio cambia si hay atasco en París?",
+                faqA1: "¡No! Todos los precios son estrictamente fijos y garantizados de antemano.",
+                faqQ2: "¿Hay sillas para bebés disponibles?",
+                faqA2: "Sí, las sillas para bebé se facilitan de forma gratuita bajo petición.",
+                faqQ3: "¿Cómo encuentro a Abdel en el aeropuerto?",
+                faqA3: "Abdel le esperará en la salida de equipajes con un cartel con su nombre.",
+                faqQ4: "¿Cómo se confirma la reserva?",
+                faqA4: "Su solicitud se envía por WhatsApp y Abdel le confirma la disponibilidad inmediatamente.",
+                ftrDesc: "Traslados privados VIP en París, Orly, CDG, Disneyland y Versalles. Abdel Hajjou (20+ años de experiencia).",
+                ftrNav: "Navegación",
+                ftrContact: "Contacto Conductor",
+                ftrApp: "Experiencia Móvil",
+                ftrAppDesc: "Reserve fácilmente en Web, Android e iOS mediante WhatsApp."
+            },
+            it: {
+                topBarExp: "Oltre 20 anni di esperienza nei trasferimenti privati a Parigi",
+                topBarGroups: "Trasporto gruppi fino a 30 passeggeri",
+                navHome: "HOME",
+                navAbout: "SU ABDEL",
+                navServices: "SERVIZI",
+                navVehicles: "VEICOLI",
+                navPrices: "PREZZI",
+                navReviews: "RECENSIONI",
+                navFaq: "FAQ",
+                bookARideBtn: "PRENOTA ORA",
+                heroBadge: "Autista Ufficiale: Abdel Hajjou — 20+ Anni di Esperienza",
+                heroSubtitle: "Trasferimenti privati confortevoli a Parigi, Orly, CDG, Beauvais, Disneyland & Versailles",
+                tagFixed: "Prezzi Fissi Garantiti",
+                tagConfirmation: "Conferma dell'Autista Richiesta",
+                tagGroups: "Gruppi fino a 30 passeggeri",
+                bookWhatsappHero: "PRENOTA SU WHATSAPP",
+                calcHeroBtn: "CALCOLA E PRENOTA",
+                aboutRole: "Chauffeur VIP e Gestione Logistica",
+                aboutYears: "Anni di Esperienza",
+                aboutPassCap: "Passeggeri Max",
+                aboutLabel: "SERVIZIO VIP PERSONALIZZATO",
+                aboutTitle: "Il tuo autista privato di fiducia a Parigi da oltre vent'anni",
+                aboutDesc1: "Benvenuti a Parigi! Sono Abdel Hajjou, autista privato con oltre 20 anni di esperienza al servizio di turisti e clienti VIP.",
+                aboutDesc2: "Sia in berlina Mercedes Classe E che in Van Mercedes, ogni trasferimento è garantito con massima puntualità e discrezione.",
+                aboutGroupTitle: "Logistica di Gruppo Fino a 30 Passeggeri",
+                aboutGroupDesc: "Viaggi con un gruppo numeroso? Coordino una flotta di veicoli Mercedes con autisti partner per trasportare fino a 30 persone.",
+                servSub: "TRASFERIMENTI SU MISURA",
+                servTitle: "SERVIZI",
+                serv1Title: "Trasferimenti Aeroporto",
+                serv1Desc: "Trasferimenti puntuali per Orly, CDG e Beauvais con monitoraggio del volo.",
+                serv2Title: "Parigi e Disneyland",
+                serv2Desc: "Collegamenti diretti tra il centro di Parigi e Disneyland Parigi.",
+                serv3Title: "Versailles ed Escursioni",
+                serv3Desc: "Tour di una giornata alla Reggia di Versailles o itinerari personalizzati.",
+                serv4Title: "Gruppi e Business",
+                serv4Desc: "Eventi aziendali e trasporto gruppi fino a 30 ospiti.",
+                vehSub: "FLOTTA MERCEDES PREMIUM",
+                vehTitle: "I NOSTRI VEICOLI",
+                veh1Feat1: "Capacità: Fino a 4 Passeggeri + Bagagli",
+                veh1Feat2: "Interni in pelle, Climatizzatore, Massimo comfort",
+                veh1Feat3: "Acqua minerale e caricabatterie a bordo",
+                veh2Feat1: "Capacità: Fino a 8 Passeggeri + Bagagli Grandi",
+                veh2Feat2: "Ideale per famiglie e gruppi numerosi",
+                veh2Feat3: "Flota per gruppi fino a 30 persone",
+                priceSub: "TRASPARENTE E GARANTITO",
+                priceTitle: "TARIFFE FISSE",
+                priceDesc: "Nessun costo nascosto. Il prezzo è fisso anche in caso di traffico.",
+                thRoute: "Tratta / Percorso",
+                thSedan: "Berlina (Fino a 4 Passeggeri)",
+                thVan: "Van (Fino a 8 Passeggeri)",
+                thAction: "Azione",
+                btnSelectRoute: "Prenota Tratta",
+                customPriceNote: "Per percorsi personalizzati o gruppi fino a 30 persone, contatta Abdel su WhatsApp.",
+                bookSub: "PRENOTA IL TUO TRASFERIMENTO",
+                bookTitle: "PRENOTA CON ABDEL",
+                bookNote: "Compila i dettagli del viaggio. La prenotazione si intende confermata dopo approvazione dell'autista.",
+                lblRoute: "Seleziona Percorso *",
+                optSelectRoute: "-- Scegli il tuo percorso --",
+                lblVehicle: "Veicolo *",
+                optSedan: "Berlina (Mercedes Classe E - Max 4 pax)",
+                optVan: "Van (Mercedes Classe V - Max 8 pax)",
+                optGroup: "Flotta Gruppo (Fino a 30 pax)",
+                lblName: "Nome completo del passeggero *",
+                lblFlight: "Numero di Volo / Treno (Opzionale)",
+                lblDate: "Data del trasferimento *",
+                lblTime: "Ora di ritiro *",
+                lblPayment: "Metodo di pagamento preferito *",
+                payCash: "💵 Contanti in auto",
+                payCard: "💳 Carta in auto (TPE)",
+                payOnline: "📲 Link Online / Stripe",
+                lblEstPrice: "Stima Prezzo Garantita:",
+                txtPriceGuarantee: "Prezzo fisso senza costi aggiuntivi per il traffico.",
+                btnSubmitBooking: "INVIA RICHIESTA SU WHATSAPP",
+                paySecTitle: "METODI DI PAGAMENTO ACCETTATI",
+                payMethod1Title: "Contanti in auto",
+                payMethod1Desc: "Pagamento diretto all'autista Abdel a fine corsa in Euro (€).",
+                payMethod2Title: "Carta di Credito (TPE)",
+                payMethod2Desc: "Visa, Mastercard e Amex accettate a bordo con POS mobile.",
+                payMethod3Title: "Link di Pagamento Online",
+                payMethod3Desc: "Pagamento anticipato tramite Stripe o PayPal su richiesta.",
+                revSub: "TESTIMONIANZE",
+                revTitle: "RECENSIONI CLIENTI",
+                rev1Text: '"Abdel ci aspettava all\'uscita bagagli di CDG. Van pulitissimo e seggiolini già pronti. Servizio eccellente!"',
+                rev2Text: '"Ho prenotato Abdel per un gruppo di 22 persone. Ha organizzato 3 van in modo impeccabile. Consigliatissimo!"',
+                rev3Text: '"Autista elegante e puntuale. Tariffa fissa garantita nonostante il traffico di Parigi."',
+                faqSub: "DOMANDE FREQUENTI",
+                faqTitle: "SERVE AIUTO?",
+                faqQ1: "Il prezzo cambia in caso di traffico a Parigi?",
+                faqA1: "No! Tutti i prezzi sono fissi e garantiti in anticipo.",
+                faqQ2: "Sono disponibili seggiolini per bambini?",
+                faqA2: "Sì, seggiolini e rialzini sono disponibili gratuitamente su richiesta.",
+                faqQ3: "Come trovo Abdel all'aeroporto?",
+                faqA3: "Abdel ti aspetterà all'uscita bagagli con un cartello personalizzato con il tuo nome.",
+                faqQ4: "Come viene confermata la prenotazione?",
+                faqA4: "La richiesta viene inviata su WhatsApp e Abdel ti confermerà la disponibilità immediatamente.",
+                ftrDesc: "Trasferimenti privati VIP a Parigi, Orly, CDG, Disneyland e Versailles. Abdel Hajjou (20+ anni di esperienza).",
+                ftrNav: "Navigazione",
+                ftrContact: "Contatto Autista",
+                ftrApp: "Esperienza Mobile",
+                ftrAppDesc: "Prenota facilmente su Web, Android e iOS via WhatsApp."
+            }
+        };
+
+        const priceMatrix = {
+            "Orly → Paris": { Sedan: 35, Van: 65 },
+            "CDG → Paris": { Sedan: 60, Van: 90 },
+            "Beauvais → Paris": { Sedan: 120, Van: 150 },
+            "CDG → Disneyland": { Sedan: 60, Van: 90 },
+            "Orly → Disneyland": { Sedan: 60, Van: 90 },
+            "Beauvais → Disneyland": { Sedan: 125, Van: 160 },
+            "Disneyland → Paris": { Sedan: 60, Van: 90 },
+            "Orly → Versailles": { Sedan: 60, Van: 90 },
+            "Paris → Versailles": { Sedan: 60, Van: 90 }
+        };
+
+        let currentLang = 'en';
+
+        function changeLang(langKey) {
+            if (!translations[langKey]) return;
+            currentLang = langKey;
+            
+            const dict = translations[langKey];
+            
+            if (langKey === 'ar') {
+                document.documentElement.dir = 'rtl';
+                document.getElementById('current-lang-label').innerText = 'العربية';
+            } else {
+                document.documentElement.dir = 'ltr';
+                const names = { en: 'English', fr: 'Français', es: 'Español', it: 'Italiano' };
+                document.getElementById('current-lang-label').innerText = names[langKey] || 'English';
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.innerText = dict[key];
+                }
+            });
+
+            calculatePrice();
+        }
+
+        function calculatePrice() {
+            const route = document.getElementById('form-route').value;
+            const vehicle = document.getElementById('form-vehicle').value;
+            const priceDisplay = document.getElementById('calculated-price');
+
+            if (!route) {
+                priceDisplay.innerText = "€--";
+                return;
+            }
+
+            if (vehicle === 'Group fleet' || route === 'Custom / Day Trip') {
+                priceDisplay.innerText = "Custom Quote";
+                return;
+            }
+
+            if (priceMatrix[route] && priceMatrix[route][vehicle]) {
+                priceDisplay.innerText = "€" + priceMatrix[route][vehicle];
+            } else {
+                priceDisplay.innerText = "Custom Quote";
+            }
+        }
+
+        function prefillBooking(routeVal, vehicleTypeStr) {
+            const routeSelect = document.getElementById('form-route');
+            const vehicleSelect = document.getElementById('form-vehicle');
+
+            routeSelect.value = routeVal;
+            
+            if (vehicleTypeStr.includes('Van')) {
+                vehicleSelect.value = 'Van';
+            } else {
+                vehicleSelect.value = 'Sedan';
+            }
+
+            calculatePrice();
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitWhatsAppBooking(event) {
+            event.preventDefault();
+
+            const route = document.getElementById('form-route').value;
+            const vehicle = document.getElementById('form-vehicle').value;
+            const name = document.getElementById('form-name').value;
+            const flight = document.getElementById('form-flight').value || "N/A";
+            const date = document.getElementById('form-date').value;
+            const time = document.getElementById('form-time').value;
+            const payment = document.querySelector('input[name="payment"]:checked').value;
+            const price = document.getElementById('calculated-price').innerText;
+
+            const langNames = {
+                en: "English 🇬🇧",
+                fr: "Français 🇫🇷",
+                ar: "العربية 🇲🇦",
+                es: "Español 🇪🇸",
+                it: "Italiano 🇮🇹"
+            };
+            const activeLangLabel = langNames[currentLang] || "English 🇬🇧";
+
+            let message = "";
+            if (currentLang === 'ar') {
+                message = 
+                    `مرحباً عبد الحق! أريد حجز نقل خاص في باريس:\n\n` +
+                    `🌐 *لغة الزبون:* ${activeLangLabel}\n` +
+                    `👤 *اسم الزبون:* ${name}\n` +
+                    `🛣️ *المسار:* ${route}\n` +
+                    `🚘 *السيارة:* ${vehicle}\n` +
+                    `📅 *التاريخ:* ${date}\n` +
+                    `⏰ *الوقت:* ${time}\n` +
+                    `✈️ *رقم الطائرة/القطار:* ${flight}\n` +
+                    `💳 *طريقة الدفع:* ${payment}\n` +
+                    `💶 *الثمن المحدد:* ${price}\n\n` +
+                    `المرجو تأكيد توفر السائق. شكراً!`;
+            } else if (currentLang === 'fr') {
+                message = 
+                    `Bonjour Abdel ! Je souhaite réserver un transfert privé :\n\n` +
+                    `🌐 *Langue du client :* ${activeLangLabel}\n` +
+                    `👤 *Nom du passager :* ${name}\n` +
+                    `🛣️ *Trajet :* ${route}\n` +
+                    `🚘 *Véhicule :* ${vehicle}\n` +
+                    `📅 *Date :* ${date}\n` +
+                    `⏰ *Heure :* ${time}\n` +
+                    `✈️ *Vol/Train :* ${flight}\n` +
+                    `💳 *Paiement :* ${payment}\n` +
+                    `💶 *Prix estimé :* ${price}\n\n` +
+                    `Veuillez confirmer la disponibilité. Merci !`;
+            } else if (currentLang === 'es') {
+                message = 
+                    `¡Hola Abdel! Me gustaría reservar un traslado privado:\n\n` +
+                    `🌐 *Idioma del cliente:* ${activeLangLabel}\n` +
+                    `👤 *Nombre del pasajero:* ${name}\n` +
+                    `🛣️ *Ruta:* ${route}\n` +
+                    `🚘 *Vehículo:* ${vehicle}\n` +
+                    `📅 *Fecha:* ${date}\n` +
+                    `⏰ *Hora:* ${time}\n` +
+                    `✈️ *Vuelo/Tren:* ${flight}\n` +
+                    `💳 *Pago:* ${payment}\n` +
+                    `💶 *Precio estimado:* ${price}\n\n` +
+                    `Por favor confirme la disponibilidad. ¡Gracias!`;
+            } else if (currentLang === 'it') {
+                message = 
+                    `Salve Abdel! Vorrei prenotare un trasferimento privato:\n\n` +
+                    `🌐 *Lingua del cliente:* ${activeLangLabel}\n` +
+                    `👤 *Nome passeggero:* ${name}\n` +
+                    `🛣️ *Percorso:* ${route}\n` +
+                    `🚘 *Veicolo:* ${vehicle}\n` +
+                    `📅 *Data:* ${date}\n` +
+                    `⏰ *Ora:* ${time}\n` +
+                    `✈️ *Volo/Treno:* ${flight}\n` +
+                    `💳 *Pagamento:* ${payment}\n` +
+                    `💶 *Prezzo stimato:* ${price}\n\n` +
+                    `Si prega di confermare la disponibilità. Grazie!`;
+            } else {
+                message = 
+                    `Hello Abdel! I would like to book a private transfer:\n\n` +
+                    `🌐 *Client Language:* ${activeLangLabel}\n` +
+                    `👤 *Passenger Name:* ${name}\n` +
+                    `🛣️ *Route:* ${route}\n` +
+                    `🚘 *Vehicle:* ${vehicle}\n` +
+                    `📅 *Date:* ${date}\n` +
+                    `⏰ *Time:* ${time}\n` +
+                    `✈️ *Flight/Train #:* ${flight}\n` +
+                    `💳 *Payment Method:* ${payment}\n` +
+                    `💶 *Guaranteed Price:* ${price}\n\n` +
+                    `Please confirm driver availability. Thank you!`;
+            }
+
+            const encodedMsg = encodeURIComponent(message);
+            window.open(`https://wa.me/33635166624?text=${encodedMsg}`, '_blank');
+        }
+
+        document.getElementById('mobile-toggle').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('form-date').setAttribute('min', today);
+            document.getElementById('form-date').value = today;
+        });
+    </script>
+</body>
+</html>
