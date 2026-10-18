@@ -72,7 +72,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
         }
 
-        /* Pulse effect for WhatsApp floating button */
         @keyframes pulse-gold {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
@@ -104,7 +103,6 @@
     <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-700/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Logo "Paris" -->
             <a href="#" class="flex flex-col">
                 <span class="font-serif text-3xl font-bold tracking-wider text-white hover:text-gold transition-colors">
                     Paris<span class="text-gold">.</span>
@@ -112,7 +110,6 @@
                 <span class="text-[9px] uppercase tracking-widest text-gold/80 -mt-1">Welcome Driver</span>
             </a>
 
-            <!-- Navigation Links -->
             <nav class="hidden lg:flex items-center space-x-6 text-xs font-semibold tracking-wider text-cream/90">
                 <a href="#home" class="hover:text-gold transition-colors uppercase" data-i18n="navHome">HOME</a>
                 <a href="#about" class="hover:text-gold transition-colors uppercase" data-i18n="navAbout">ABOUT ABDEL</a>
@@ -130,7 +127,6 @@
                         <i class="fa-solid fa-chevron-down text-[10px] ml-1"></i>
                     </button>
 
-                    <!-- Dropdown Menu -->
                     <div id="lang-menu" class="absolute right-0 mt-1 w-44 lang-dropdown-box rounded-md py-2 hidden group-hover:block transition-all z-50">
                         <a href="#" onclick="changeLang('en')" class="flex items-center space-x-3 px-4 py-2 text-xs text-cream hover:bg-navy-700 hover:text-gold">
                             <span>🇬🇧</span>
@@ -156,20 +152,17 @@
                 </div>
             </nav>
 
-            <!-- Book A Ride CTA Button -->
             <div class="hidden sm:flex items-center space-x-4">
                 <a href="#booking" class="btn-gold-grad font-bold text-xs uppercase px-5 py-2.5 rounded tracking-wider inline-block">
                     <i class="fa-solid fa-car-side mr-1.5"></i> <span data-i18n="bookARideBtn">BOOK A RIDE</span>
                 </a>
             </div>
 
-            <!-- Mobile Hamburger Button -->
             <button id="mobile-toggle" class="lg:hidden text-gold text-2xl p-2 focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
 
-        <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-navy-950 border-b border-navy-700 px-6 py-4 space-y-3 text-xs font-semibold">
             <a href="#home" class="block text-cream hover:text-gold" data-i18n="navHome">HOME</a>
             <a href="#about" class="block text-cream hover:text-gold" data-i18n="navAbout">ABOUT ABDEL</a>
@@ -195,41 +188,32 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden py-16">
-        
-        <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1920&auto=format&fit=crop" alt="Paris Eiffel Tower" class="w-full h-full object-cover object-center">
+            <img src="1.jpeg" alt="Paris Eiffel Tower Background" class="w-full h-full object-cover object-center">
             <div class="absolute inset-0 bg-navy-950/75 mix-blend-multiply"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-navy-950/80"></div>
         </div>
 
-        <!-- Hero Content -->
         <div class="relative z-10 max-w-5xl mx-auto space-y-6 pt-6">
-            
-            <!-- Driver Credential Badge -->
             <div class="inline-flex items-center space-x-2 bg-navy-800/90 border border-gold/40 rounded-full px-4 py-1.5 backdrop-blur-md">
                 <i class="fa-solid fa-shield-halved text-gold text-xs"></i>
                 <span class="text-xs sm:text-sm font-medium text-cream tracking-wide" data-i18n="heroBadge">Official Chauffeur: Abdel Hajjou — 20+ Years Experience</span>
             </div>
 
-            <!-- Main Title -->
             <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide text-white uppercase drop-shadow-2xl">
                 PARIS WELCOME DRIVER
             </h1>
 
-            <!-- Subtitle -->
             <p class="text-base sm:text-xl md:text-2xl text-cream-muted font-light tracking-wide max-w-3xl mx-auto drop-shadow-md" data-i18n="heroSubtitle">
-                Comfortable Private Transfers in Paris, Orly, CDG, Disneyland & Versailles
+                Comfortable Private Transfers in Paris, Orly, CDG, Beauvais, Disneyland & Versailles
             </p>
 
-            <!-- Highlights Pill Grid -->
             <div class="pt-2 flex flex-wrap justify-center gap-3 text-xs sm:text-sm text-gold/90 font-medium">
                 <span class="bg-navy-900/80 px-3 py-1.5 rounded-md border border-navy-700"><i class="fa-solid fa-check text-gold mr-1.5"></i> <span data-i18n="tagFixed">Fixed Guaranteed Prices</span></span>
                 <span class="bg-navy-900/80 px-3 py-1.5 rounded-md border border-navy-700"><i class="fa-solid fa-check text-gold mr-1.5"></i> <span data-i18n="tagConfirmation">Driver Confirmation Required</span></span>
                 <span class="bg-navy-900/80 px-3 py-1.5 rounded-md border border-navy-700"><i class="fa-solid fa-check text-gold mr-1.5"></i> <span data-i18n="tagGroups">Groups up to 30 passengers</span></span>
             </div>
 
-            <!-- Hero Action Buttons -->
             <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="https://wa.me/33635166624?text=Hello%20Abdel,%20I%20would%20like%20to%20book%20a%20private%20transfer%20in%20Paris." target="_blank" class="w-full sm:w-auto btn-gold-grad inline-flex items-center justify-center space-x-2.5 font-extrabold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-md shadow-2xl">
                     <i class="fa-brands fa-whatsapp text-xl text-green-950"></i>
@@ -243,12 +227,11 @@
         </div>
     </section>
 
-    <!-- About Driver Section (20 Years Experience + Group Logistics) -->
+    <!-- About Driver Section -->
     <section id="about" class="bg-navy-900 py-16 px-4 sm:px-6 lg:px-12 border-t border-navy-800">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Driver Info Card -->
                 <div class="lg:col-span-5 relative">
                     <div class="card-navy rounded-2xl p-8 text-center relative overflow-hidden gold-border-glow">
                         <div class="w-28 h-28 mx-auto rounded-full bg-gradient-to-tr from-gold to-gold-light p-1 shadow-xl mb-4">
@@ -283,7 +266,6 @@
                     </div>
                 </div>
 
-                <!-- Driver Biography & Services Scope -->
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-block px-3 py-1 bg-gold/10 border border-gold/30 rounded text-gold text-xs font-semibold uppercase tracking-widest" data-i18n="aboutLabel">
                         PERSONAL VIP SERVICE
@@ -298,7 +280,6 @@
                         Whether you need a sleek <strong>Mercedes-Benz E-Class</strong> sedan or a spacious <strong>Mercedes Van</strong>, every transfer is executed with utmost punctuality, comfort, and discretion.
                     </p>
 
-                    <!-- Group Logistics Highlight -->
                     <div class="bg-navy-800 p-5 rounded-xl border-l-4 border-gold space-y-2">
                         <h4 class="font-bold text-gold text-sm flex items-center" data-i18n="aboutGroupTitle">
                             <i class="fa-solid fa-users-gear text-lg mr-2"></i> Group Logistics Up to 30 Passengers
@@ -317,7 +298,6 @@
     <section id="services" class="bg-navy-800 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-700/50">
         <div class="max-w-7xl mx-auto">
             
-            <!-- Section Title -->
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
                 <span class="text-gold text-xs uppercase tracking-widest font-semibold" data-i18n="servSub">TAILORED PRIVATE TRANSFERS</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white uppercase tracking-wider" data-i18n="servTitle">
@@ -326,21 +306,18 @@
                 <div class="w-16 h-0.5 bg-gold mx-auto"></div>
             </div>
 
-            <!-- 4-Column Grid for Services -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- Service Item 1: Airport Transfers -->
                 <div class="card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
                     <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
                         <i class="fa-solid fa-plane-arrival"></i>
                     </div>
                     <h3 class="font-serif text-lg font-bold text-white" data-i18n="serv1Title">Airport Transfers</h3>
                     <p class="text-xs text-cream-muted leading-relaxed" data-i18n="serv1Desc">
-                        Punctual & stress-free transfers for Paris Orly Airport and Charles de Gaulle (CDG) with flight monitoring.
+                        Punctual & stress-free transfers for Orly, CDG, and Beauvais airports with flight monitoring.
                     </p>
                 </div>
 
-                <!-- Service Item 2: City Tours & Paris -->
                 <div class="flex flex-col items-center card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
                     <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
                         <i class="fa-solid fa-landmark"></i>
@@ -351,7 +328,6 @@
                     </p>
                 </div>
 
-                <!-- Service Item 3: Day Trips & Versailles -->
                 <div class="card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
                     <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
                         <i class="fa-solid fa-crown"></i>
@@ -362,7 +338,6 @@
                     </p>
                 </div>
 
-                <!-- Service Item 4: Group & Business Travel -->
                 <div class="card-navy p-6 rounded-xl text-center space-y-4 hover:border-gold/50 transition-all">
                     <div class="w-16 h-16 mx-auto rounded-full bg-navy-700 border border-gold/30 flex items-center justify-center text-gold text-2xl">
                         <i class="fa-solid fa-briefcase"></i>
@@ -377,7 +352,7 @@
         </div>
     </section>
 
-    <!-- Fleet / Vehicles Section -->
+    <!-- Fleet / Vehicles Section (Updated with the new van image) -->
     <section id="vehicles" class="bg-navy-900 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-800">
         <div class="max-w-7xl mx-auto space-y-12">
             
@@ -391,10 +366,10 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Vehicle 1: Sedan Mercedes E-Class -->
+                <!-- Vehicle 1: Sedan Mercedes -->
                 <div class="card-navy rounded-2xl overflow-hidden group">
                     <div class="h-60 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1000&auto=format&fit=crop" alt="Mercedes Benz E-Class 2019" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="1.jpeg" alt="Mercedes Benz Sedan" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute top-4 right-4 bg-gold text-navy-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase">
                             Up to 4 Passengers
                         </div>
@@ -415,12 +390,18 @@
                     </div>
                 </div>
 
-                <!-- Vehicle 2: Mercedes Van -->
-                <div class="card-navy rounded-2xl overflow-hidden group">
-                    <div class="h-60 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop" alt="Mercedes Van" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-4 right-4 bg-gold text-navy-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase">
+                <!-- Vehicle 2: Mercedes Van (UPDATED WITH NEW IMAGE) -->
+                <div class="card-navy rounded-2xl overflow-hidden group border border-gold/30">
+                    <div class="h-60 overflow-hidden relative bg-navy-950">
+                        <!-- Replaced with the second picture filename -->
+                        <img src="ChatGPT Image Oct 18, 2026, 08_08_25 PM.png" alt="Mercedes V-Class Van" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-gold text-navy-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase z-10 shadow-lg">
                             Up to 8 Passengers
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-10 flex items-center space-x-2 bg-navy-900/90 border border-gold/40 px-3 py-1.5 rounded-md backdrop-blur-md">
+                            <i class="fa-solid fa-van-shuttle text-gold text-sm"></i>
+                            <span class="text-xs font-bold text-gold uppercase tracking-wider">Mercedes Executive Van</span>
                         </div>
                     </div>
                     <div class="p-6 space-y-4">
@@ -429,7 +410,7 @@
                                 <h3 class="font-serif text-xl font-bold text-white">Mercedes-Benz Van</h3>
                                 <p class="text-xs text-gold">V-Class / Vito Premium</p>
                             </div>
-                            <span class="text-xs bg-navy-800 text-cream px-2.5 py-1 rounded border border-navy-700">Van / Minivan</span>
+                            <span class="text-xs bg-navy-800 text-gold border border-gold/30 px-2.5 py-1 rounded font-semibold">Van</span>
                         </div>
                         <ul class="text-xs text-cream-muted space-y-2 border-t border-b border-navy-700/80 py-3">
                             <li class="flex items-center"><i class="fa-solid fa-check text-gold mr-2"></i> <span data-i18n="veh2Feat1">Capacity: Up to 8 Passengers + Large Luggage</span></li>
@@ -443,7 +424,7 @@
         </div>
     </section>
 
-    <!-- Pricing Section (Official Agreed Rates) -->
+    <!-- Pricing Section -->
     <section id="prices" class="bg-navy-800 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-700/50">
         <div class="max-w-7xl mx-auto space-y-12">
             
@@ -499,6 +480,19 @@
 
                         <tr class="hover:bg-navy-800/50 transition-colors">
                             <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-plane-arrival text-gold mr-3"></i> Beauvais Airport → Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€120</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€150</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Beauvais Airport → Paris', 'Sedan (120€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
                                 <i class="fa-solid fa-wand-magic-sparkles text-gold mr-3"></i> CDG Airport → Disneyland Paris
                             </td>
                             <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€60</td>
@@ -518,6 +512,19 @@
                             <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€90</td>
                             <td class="py-4 px-6 text-center">
                                 <button onclick="prefillBooking('Orly Airport → Disneyland Paris', 'Sedan (60€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
+                                    <span data-i18n="btnSelectRoute">Book Route</span>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="hover:bg-navy-800/50 transition-colors">
+                            <td class="py-4 px-6 font-semibold flex items-center">
+                                <i class="fa-solid fa-wand-magic-sparkles text-gold mr-3"></i> Beauvais Airport → Disneyland Paris
+                            </td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€125</td>
+                            <td class="py-4 px-6 text-center font-serif text-lg text-gold font-bold">€160</td>
+                            <td class="py-4 px-6 text-center">
+                                <button onclick="prefillBooking('Beauvais Airport → Disneyland Paris', 'Sedan (125€)')" class="bg-navy-700 hover:bg-gold hover:text-navy-950 text-cream text-[11px] font-bold px-3 py-1.5 rounded transition-all">
                                     <span data-i18n="btnSelectRoute">Book Route</span>
                                 </button>
                             </td>
@@ -566,7 +573,6 @@
                 </table>
             </div>
 
-            <!-- Custom / Group Price Note -->
             <div class="bg-navy-900 border border-gold/30 p-4 rounded-xl text-center text-xs text-cream-muted">
                 <i class="fa-solid fa-info-circle text-gold mr-1"></i> <span data-i18n="customPriceNote">For custom routes, day trips, or groups over 8 up to 30 passengers, contact Abdel directly on WhatsApp for an instant custom quote.</span>
             </div>
@@ -574,7 +580,7 @@
         </div>
     </section>
 
-    <!-- Booking Form Section (With Date/Time/Flight Number/Payment Methods) -->
+    <!-- Booking Form Section -->
     <section id="booking" class="bg-navy-900 py-16 sm:py-20 px-4 sm:px-6 lg:px-12 border-t border-navy-800">
         <div class="max-w-4xl mx-auto">
             
@@ -594,15 +600,16 @@
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         
-                        <!-- Route Selection -->
                         <div class="space-y-2">
                             <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblRoute">Select Route / Destination *</label>
                             <select id="form-route" onchange="calculatePrice()" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
                                 <option value="" data-i18n="optSelectRoute">-- Select Your Transfer Route --</option>
                                 <option value="Orly → Paris">Orly Airport → Paris</option>
                                 <option value="CDG → Paris">CDG Airport → Paris</option>
+                                <option value="Beauvais → Paris">Beauvais Airport → Paris</option>
                                 <option value="CDG → Disneyland">CDG Airport → Disneyland Paris</option>
                                 <option value="Orly → Disneyland">Orly Airport → Disneyland Paris</option>
+                                <option value="Beauvais → Disneyland">Beauvais Airport → Disneyland Paris</option>
                                 <option value="Disneyland → Paris">Disneyland Paris → Paris Center</option>
                                 <option value="Orly → Versailles">Orly Airport → Versailles</option>
                                 <option value="Paris → Versailles">Paris Center → Versailles</option>
@@ -610,7 +617,6 @@
                             </select>
                         </div>
 
-                        <!-- Vehicle Selection -->
                         <div class="space-y-2">
                             <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblVehicle">Select Vehicle *</label>
                             <select id="form-vehicle" onchange="calculatePrice()" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
@@ -620,25 +626,21 @@
                             </select>
                         </div>
 
-                        <!-- Passenger Name -->
                         <div class="space-y-2">
                             <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblName">Passenger Full Name *</label>
                             <input type="text" id="form-name" required placeholder="e.g. Jean Dupont" class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
                         </div>
 
-                        <!-- Flight or Train Number -->
                         <div class="space-y-2">
                             <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblFlight">Flight / Train Number (Optional)</label>
                             <input type="text" id="form-flight" placeholder="e.g. AF1234 or Eurostar 9010" class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
                         </div>
 
-                        <!-- Pickup Date -->
                         <div class="space-y-2">
                             <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblDate">Transfer Date *</label>
                             <input type="date" id="form-date" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
                         </div>
 
-                        <!-- Pickup Time -->
                         <div class="space-y-2">
                             <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblTime">Transfer Time *</label>
                             <input type="time" id="form-time" required class="w-full bg-navy-950 border border-navy-700 text-cream text-xs rounded-md p-3 focus:border-gold focus:outline-none">
@@ -646,7 +648,6 @@
 
                     </div>
 
-                    <!-- Payment Method Preference -->
                     <div class="space-y-2 pt-2">
                         <label class="text-xs font-semibold text-gold uppercase tracking-wider block" data-i18n="lblPayment">Preferred Payment Method *</label>
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -665,7 +666,6 @@
                         </div>
                     </div>
 
-                    <!-- Price Estimate Live Display -->
                     <div class="bg-navy-950 p-4 rounded-xl border border-gold/40 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2">
                         <div>
                             <span class="text-xs text-cream-muted uppercase tracking-wider block" data-i18n="lblEstPrice">Guaranteed Price Estimate:</span>
@@ -676,7 +676,6 @@
                         </span>
                     </div>
 
-                    <!-- Submit Button -->
                     <button type="submit" class="w-full btn-gold-grad py-4 rounded-md font-extrabold text-sm uppercase tracking-wider text-navy-950 flex items-center justify-center space-x-2">
                         <i class="fa-brands fa-whatsapp text-xl"></i>
                         <span data-i18n="btnSubmitBooking">SEND BOOKING REQUEST VIA WHATSAPP</span>
@@ -727,7 +726,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Review 1 -->
                 <div class="card-navy p-6 rounded-xl space-y-4">
                     <div class="flex text-gold text-xs space-x-1">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -741,7 +739,6 @@
                     </div>
                 </div>
 
-                <!-- Review 2 -->
                 <div class="card-navy p-6 rounded-xl space-y-4">
                     <div class="flex text-gold text-xs space-x-1">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -755,7 +752,6 @@
                     </div>
                 </div>
 
-                <!-- Review 3 -->
                 <div class="card-navy p-6 rounded-xl space-y-4">
                     <div class="flex text-gold text-xs space-x-1">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -899,7 +895,7 @@
                 navFaq: "FAQ",
                 bookARideBtn: "BOOK A RIDE",
                 heroBadge: "Official Chauffeur: Abdel Hajjou — 20+ Years Experience",
-                heroSubtitle: "Comfortable Private Transfers in Paris, Orly, CDG, Disneyland & Versailles",
+                heroSubtitle: "Comfortable Private Transfers in Paris, Orly, CDG, Beauvais, Disneyland & Versailles",
                 tagFixed: "Fixed Guaranteed Prices",
                 tagConfirmation: "Driver Confirmation Required",
                 tagGroups: "Groups up to 30 passengers",
@@ -917,7 +913,7 @@
                 servSub: "TAILORED PRIVATE TRANSFERS",
                 servTitle: "SERVICES",
                 serv1Title: "Airport Transfers",
-                serv1Desc: "Punctual & stress-free transfers for Paris Orly Airport and Charles de Gaulle (CDG) with flight monitoring.",
+                serv1Desc: "Punctual & stress-free transfers for Orly, CDG, and Beauvais airports with flight monitoring.",
                 serv2Title: "Paris & Disneyland",
                 serv2Desc: "Seamless rides connecting central Paris to Disneyland Paris hotels and parks for families and couples.",
                 serv3Title: "Versailles & Day Trips",
@@ -1001,7 +997,7 @@
                 navFaq: "FAQ",
                 bookARideBtn: "RÉSERVER UN TRAJET",
                 heroBadge: "Chauffeur Officiel: Abdel Hajjou — 20+ ans d'expérience",
-                heroSubtitle: "Transferts privés confortables à Paris, Orly, CDG, Disneyland & Versailles",
+                heroSubtitle: "Transferts privés confortables à Paris, Orly, CDG, Beauvais, Disneyland & Versailles",
                 tagFixed: "Tarifs Fixes Garantis",
                 tagConfirmation: "Confirmation Chauffeur Requis",
                 tagGroups: "Groupes jusqu'à 30 passagers",
@@ -1019,7 +1015,7 @@
                 servSub: "TRANSFERTS SUR MESURE",
                 servTitle: "NOS SERVICES",
                 serv1Title: "Transferts Aéroports",
-                serv1Desc: "Transferts ponctuels pour Orly et CDG avec suivi en direct de votre vol.",
+                serv1Desc: "Transferts ponctuels pour Orly, CDG et Beauvais avec suivi de vol.",
                 serv2Title: "Paris & Disneyland",
                 serv2Desc: "Liaisons directes entre Paris centre et les hôtels/parcs de Disneyland Paris.",
                 serv3Title: "Versailles & Excursions",
@@ -1103,7 +1099,7 @@
                 navFaq: "الأسئلة الشائعة",
                 bookARideBtn: "طلب حجز",
                 heroBadge: "السائق الخاص: Abdel Hajjou — خبرة أزيد من 20 سنة",
-                heroSubtitle: "توصيل خاص ومريح في باريس، مطار أورلي، CDG، ديزني لاند فرساي",
+                heroSubtitle: "توصيل خاص ومريح في باريس، مطار أورلي، CDG، بوفيه، ديزني لاند وفرساي",
                 tagFixed: "أسعار ثابته ومضمونة",
                 tagConfirmation: "الحجز يتأكد بعد موافقة السائق",
                 tagGroups: "نقل مجموعات حتى 30 شخصاً",
@@ -1121,7 +1117,7 @@
                 servSub: "رحلات خاصة وحسب الطلب",
                 servTitle: "الخدمات",
                 serv1Title: "توصيل المطارات",
-                serv1Desc: "توصيل من وإلى مطار أورلي (Orly) ومطار شارل ديغول (CDG) مع متابعة مواعيد الطيران.",
+                serv1Desc: "توصيل من وإلى مطار أورلي، شارل ديغول، ومطار بوفيه (Beauvais) مع متابعة الطيران.",
                 serv2Title: "باريس وديزني لاند",
                 serv2Desc: "تنقل مريح وسريع بين وسط باريس وفنادق ومتنزهات ديزني لاند.",
                 serv3Title: "فرساي والجولات السياحية",
@@ -1205,7 +1201,7 @@
                 navFaq: "FAQ",
                 bookARideBtn: "RESERVAR",
                 heroBadge: "Chófer Oficial: Abdel Hajjou — 20+ Años de Experiencia",
-                heroSubtitle: "Traslados privados cómodos en París, Orly, CDG, Disneyland y Versalles",
+                heroSubtitle: "Traslados privados cómodos en París, Orly, CDG, Beauvais, Disneyland y Versalles",
                 tagFixed: "Precios Fijos Garantizados",
                 tagConfirmation: "Requiere Confirmación del Conductor",
                 tagGroups: "Grupos hasta 30 pasajeros",
@@ -1223,7 +1219,7 @@
                 servSub: "TRASLADOS PRIVADOS A MEDIDA",
                 servTitle: "SERVICIOS",
                 serv1Title: "Traslados de Aeropuerto",
-                serv1Desc: "Traslados puntuales para Orly y CDG con seguimiento de su vuelo.",
+                serv1Desc: "Traslados puntuales para Orly, CDG y Beauvais con seguimiento de su vuelo.",
                 serv2Title: "París y Disneyland",
                 serv2Desc: "Conexiones directas entre el centro de París y Disneyland París.",
                 serv3Title: "Versalles y Excursiones",
@@ -1307,7 +1303,7 @@
                 navFaq: "FAQ",
                 bookARideBtn: "PRENOTA ORA",
                 heroBadge: "Autista Ufficiale: Abdel Hajjou — 20+ Anni di Esperienza",
-                heroSubtitle: "Trasferimenti privati confortevoli a Parigi, Orly, CDG, Disneyland & Versailles",
+                heroSubtitle: "Trasferimenti privati confortevoli a Parigi, Orly, CDG, Beauvais, Disneyland & Versailles",
                 tagFixed: "Prezzi Fissi Garantiti",
                 tagConfirmation: "Conferma dell'Autista Richiesta",
                 tagGroups: "Gruppi fino a 30 passeggeri",
@@ -1325,7 +1321,7 @@
                 servSub: "TRASFERIMENTI SU MISURA",
                 servTitle: "SERVIZI",
                 serv1Title: "Trasferimenti Aeroporto",
-                serv1Desc: "Trasferimenti puntuali per Orly e CDG con monitoraggio del volo.",
+                serv1Desc: "Trasferimenti puntuali per Orly, CDG e Beauvais con monitoraggio del volo.",
                 serv2Title: "Parigi e Disneyland",
                 serv2Desc: "Collegamenti diretti tra il centro di Parigi e Disneyland Parigi.",
                 serv3Title: "Versailles ed Escursioni",
@@ -1339,7 +1335,7 @@
                 veh1Feat3: "Acqua minerale e caricabatterie a bordo",
                 veh2Feat1: "Capacità: Fino a 8 Passeggeri + Bagagli Grandi",
                 veh2Feat2: "Ideale per famiglie e gruppi numerosi",
-                veh2Feat3: "Flotta per gruppi fino a 30 persone",
+                veh2Feat3: "Flota per gruppi fino a 30 persone",
                 priceSub: "TRASPARENTE E GARANTITO",
                 priceTitle: "TARIFFE FISSE",
                 priceDesc: "Nessun costo nascosto. Il prezzo è fisso anche in caso di traffico.",
@@ -1399,12 +1395,13 @@
             }
         };
 
-        // Price mapping matrix
         const priceMatrix = {
             "Orly → Paris": { Sedan: 35, Van: 65 },
             "CDG → Paris": { Sedan: 60, Van: 90 },
+            "Beauvais → Paris": { Sedan: 120, Van: 150 },
             "CDG → Disneyland": { Sedan: 60, Van: 90 },
             "Orly → Disneyland": { Sedan: 60, Van: 90 },
+            "Beauvais → Disneyland": { Sedan: 125, Van: 160 },
             "Disneyland → Paris": { Sedan: 60, Van: 90 },
             "Orly → Versailles": { Sedan: 60, Van: 90 },
             "Paris → Versailles": { Sedan: 60, Van: 90 }
@@ -1412,14 +1409,12 @@
 
         let currentLang = 'en';
 
-        // Function to switch language
         function changeLang(langKey) {
             if (!translations[langKey]) return;
             currentLang = langKey;
             
             const dict = translations[langKey];
             
-            // RTL handling for Arabic
             if (langKey === 'ar') {
                 document.documentElement.dir = 'rtl';
                 document.getElementById('current-lang-label').innerText = 'العربية';
@@ -1429,7 +1424,6 @@
                 document.getElementById('current-lang-label').innerText = names[langKey] || 'English';
             }
 
-            // Update DOM text
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
@@ -1437,11 +1431,9 @@
                 }
             });
 
-            // Recalculate price in form
             calculatePrice();
         }
 
-        // Live Price Calculation in Booking Form
         function calculatePrice() {
             const route = document.getElementById('form-route').value;
             const vehicle = document.getElementById('form-vehicle').value;
@@ -1464,7 +1456,6 @@
             }
         }
 
-        // Pre-fill booking form from table button
         function prefillBooking(routeVal, vehicleTypeStr) {
             const routeSelect = document.getElementById('form-route');
             const vehicleSelect = document.getElementById('form-vehicle');
@@ -1478,12 +1469,9 @@
             }
 
             calculatePrice();
-
-            // Smooth scroll to form
             document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Handle WhatsApp booking form submission
         function submitWhatsAppBooking(event) {
             event.preventDefault();
 
@@ -1496,29 +1484,91 @@
             const payment = document.querySelector('input[name="payment"]:checked').value;
             const price = document.getElementById('calculated-price').innerText;
 
-            // Formatted message
-            const message = 
-                `Hello Abdel! I would like to book a private transfer with Paris Welcome Driver:\n\n` +
-                `👤 *Passenger Name:* ${name}\n` +
-                `🛣️ *Route:* ${route}\n` +
-                `🚘 *Vehicle:* ${vehicle}\n` +
-                `📅 *Date:* ${date}\n` +
-                `⏰ *Time:* ${time}\n` +
-                `✈️ *Flight/Train #:* ${flight}\n` +
-                `💳 *Payment Method:* ${payment}\n` +
-                `💶 *Guaranteed Price:* ${price}\n\n` +
-                `Please confirm driver availability. Thank you!`;
+            const langNames = {
+                en: "English 🇬🇧",
+                fr: "Français 🇫🇷",
+                ar: "العربية 🇲🇦",
+                es: "Español 🇪🇸",
+                it: "Italiano 🇮🇹"
+            };
+            const activeLangLabel = langNames[currentLang] || "English 🇬🇧";
+
+            let message = "";
+            if (currentLang === 'ar') {
+                message = 
+                    `مرحباً عبد الحق! أريد حجز نقل خاص في باريس:\n\n` +
+                    `🌐 *لغة الزبون:* ${activeLangLabel}\n` +
+                    `👤 *اسم الزبون:* ${name}\n` +
+                    `🛣️ *المسار:* ${route}\n` +
+                    `🚘 *السيارة:* ${vehicle}\n` +
+                    `📅 *التاريخ:* ${date}\n` +
+                    `⏰ *الوقت:* ${time}\n` +
+                    `✈️ *رقم الطائرة/القطار:* ${flight}\n` +
+                    `💳 *طريقة الدفع:* ${payment}\n` +
+                    `💶 *الثمن المحدد:* ${price}\n\n` +
+                    `المرجو تأكيد توفر السائق. شكراً!`;
+            } else if (currentLang === 'fr') {
+                message = 
+                    `Bonjour Abdel ! Je souhaite réserver un transfert privé :\n\n` +
+                    `🌐 *Langue du client :* ${activeLangLabel}\n` +
+                    `👤 *Nom du passager :* ${name}\n` +
+                    `🛣️ *Trajet :* ${route}\n` +
+                    `🚘 *Véhicule :* ${vehicle}\n` +
+                    `📅 *Date :* ${date}\n` +
+                    `⏰ *Heure :* ${time}\n` +
+                    `✈️ *Vol/Train :* ${flight}\n` +
+                    `💳 *Paiement :* ${payment}\n` +
+                    `💶 *Prix estimé :* ${price}\n\n` +
+                    `Veuillez confirmer la disponibilité. Merci !`;
+            } else if (currentLang === 'es') {
+                message = 
+                    `¡Hola Abdel! Me gustaría reservar un traslado privado:\n\n` +
+                    `🌐 *Idioma del cliente:* ${activeLangLabel}\n` +
+                    `👤 *Nombre del pasajero:* ${name}\n` +
+                    `🛣️ *Ruta:* ${route}\n` +
+                    `🚘 *Vehículo:* ${vehicle}\n` +
+                    `📅 *Fecha:* ${date}\n` +
+                    `⏰ *Hora:* ${time}\n` +
+                    `✈️ *Vuelo/Tren:* ${flight}\n` +
+                    `💳 *Pago:* ${payment}\n` +
+                    `💶 *Precio estimado:* ${price}\n\n` +
+                    `Por favor confirme la disponibilidad. ¡Gracias!`;
+            } else if (currentLang === 'it') {
+                message = 
+                    `Salve Abdel! Vorrei prenotare un trasferimento privato:\n\n` +
+                    `🌐 *Lingua del cliente:* ${activeLangLabel}\n` +
+                    `👤 *Nome passeggero:* ${name}\n` +
+                    `🛣️ *Percorso:* ${route}\n` +
+                    `🚘 *Veicolo:* ${vehicle}\n` +
+                    `📅 *Data:* ${date}\n` +
+                    `⏰ *Ora:* ${time}\n` +
+                    `✈️ *Volo/Treno:* ${flight}\n` +
+                    `💳 *Pagamento:* ${payment}\n` +
+                    `💶 *Prezzo stimato:* ${price}\n\n` +
+                    `Si prega di confermare la disponibilità. Grazie!`;
+            } else {
+                message = 
+                    `Hello Abdel! I would like to book a private transfer:\n\n` +
+                    `🌐 *Client Language:* ${activeLangLabel}\n` +
+                    `👤 *Passenger Name:* ${name}\n` +
+                    `🛣️ *Route:* ${route}\n` +
+                    `🚘 *Vehicle:* ${vehicle}\n` +
+                    `📅 *Date:* ${date}\n` +
+                    `⏰ *Time:* ${time}\n` +
+                    `✈️ *Flight/Train #:* ${flight}\n` +
+                    `💳 *Payment Method:* ${payment}\n` +
+                    `💶 *Guaranteed Price:* ${price}\n\n` +
+                    `Please confirm driver availability. Thank you!`;
+            }
 
             const encodedMsg = encodeURIComponent(message);
             window.open(`https://wa.me/33635166624?text=${encodedMsg}`, '_blank');
         }
 
-        // Mobile navbar toggle
         document.getElementById('mobile-toggle').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Set default date picker to today
         document.addEventListener("DOMContentLoaded", () => {
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('form-date').setAttribute('min', today);
